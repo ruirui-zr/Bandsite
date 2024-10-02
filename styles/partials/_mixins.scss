@@ -1,5 +1,6 @@
 @use 'variables' as *;
 
+// breakpoints for tablet & desktop
 @mixin tablet{
     @media screen and (min-width: $tablet-break-point){
         @content;
@@ -12,16 +13,35 @@
     }
 }
 
-@mixin padding-left{
-    padding-left: 20px;
+// padding & margins
+@mixin padding{
+    padding-left: 16px;
+    padding-right: 16px;
     @content;
 }
 
-@mixin fadeblackcolor{
-    background-color: $BandSite-Black;
-    opacity: 50%;
-    z-index: 1;
+@mixin padding-top{
+    padding-top: 16px;
     @content;
+}
+@mixin padding-bottom{
+    padding-bottom: 16px;
+    @content;
+}
+
+@mixin margin-bottom{
+    margin-bottom: 24px;
+    @content;
+}
+
+
+@mixin link {
+    color: $White;
+    text-decoration: none;
+
+    &:visited {
+        color: $White;
+    }
 }
 
 @mixin remove-underline{
