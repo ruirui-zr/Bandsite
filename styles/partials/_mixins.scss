@@ -1,0 +1,37 @@
+@use 'variables' as *;
+
+@mixin tablet{
+    @media screen and (min-width: $tablet-break-point){
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media screen and (mixin-width: $desktop-break-point){
+        @content;
+    }
+}
+
+@mixin padding-left{
+    padding-left: 20px;
+    @content;
+}
+
+@mixin fadeblackcolor{
+    background-color: $BandSite-Black;
+    opacity: 50%;
+    z-index: 1;
+    @content;
+}
+
+@mixin remove-underline{
+    text-decoration: none;
+    @content;
+}
+
+@mixin images{
+    max-width: 100%; 
+    height: auto;   
+    display: block; 
+    @content;
+}

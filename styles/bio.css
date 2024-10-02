@@ -1,0 +1,80 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #323232;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    text-align: left;
+    flex-direction: row;
+    padding-left: 20px;
+  }
+}
+.header__sections {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  color: #FFFFFF;
+}
+@media screen and (min-width: 768px) {
+  .header__sections {
+    justify-content: flex-start;
+  }
+  .header__sections .section__titles {
+    padding-left: 20px;
+  }
+}
+.header .link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.header .link:visited {
+  color: #FFFFFF;
+}
+.header__image {
+  background-image: url("../assets/Images/hero-bio.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 440px;
+  position: relative;
+}
+.header__image--modified {
+  position: absolute;
+  bottom: 80px;
+  left: 40px;
+  color: #FFFFFF;
+}
+
+.section__titles {
+  height: 1px;
+  color: #E1E1E1;
+}
+.section__titles:active {
+  color: #FFFFFF;
+}
+.section__titles:hover {
+  color: #FFFFFF;
+  font-weight: 400;
+}
+
+.musicians__image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.photogallery {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}/*# sourceMappingURL=bio.css.map */

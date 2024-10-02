@@ -1,0 +1,90 @@
+@use 'partials/mixins' as *;
+@use 'partials/variables' as *;
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    // font-family:
+}
+
+.header {
+    background-color: $BandSite-Black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet {
+        text-align: left;
+        flex-direction: row;
+        @include padding-left;
+    }
+
+    &__sections {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+        color: $White;
+
+        @include tablet {
+            justify-content: flex-start;
+
+            .section__titles {
+                @include padding-left;
+            }
+        }
+
+    }
+
+    .link {
+        color: $White;
+        @include remove-underline;
+
+        &:visited {
+            color: $White;
+        }
+    }
+
+    &__image {
+        background-image: url("../assets/Images/hero-bio.jpg");
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 440px;
+        position: relative;
+
+        &--modified {
+            position: absolute;
+            bottom: 80px;
+            left: 40px;
+            color: $White;
+        }
+    }
+
+}
+
+.section__titles {
+    height: 1px;
+    color: $Mercury;
+
+
+    &:active {
+        color: $White;
+    }
+
+    &:hover {
+        color: $White;
+        font-weight: 400;
+    }
+}
+
+// main 
+.musicians__image{
+    @include images;
+}
+
+.photogallery{
+    @include images;
+}
