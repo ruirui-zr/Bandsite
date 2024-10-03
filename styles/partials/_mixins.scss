@@ -14,29 +14,22 @@
 }
 
 // padding & margins
-@mixin padding{
+@mixin padding-left-right{
     padding-left: 16px;
     padding-right: 16px;
     @content;
 }
 
-@mixin padding-top{
-    padding-top: 16px;
-    @content;
-}
-@mixin padding-bottom{
-    padding-bottom: 16px;
+@mixin tablet-padding-left-right{
+    padding-left: 36px;
+    padding-right: 36px;
     @content;
 }
 
-@mixin padding-top-title{
-    padding-top: 24px;
-    @content;
-}
-
-@mixin padding-bottom-title{
-    padding-bottom: 24px;
-    @content;
+// a bundle padding for the musician part in tablet screen
+@mixin tablet-musicians{
+    padding-left: 48px;
+    padding-right: 48px;
 }
 
 

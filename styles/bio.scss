@@ -17,12 +17,6 @@ h3 {
     flex-direction: column;
     align-items: center;
 
-    @include tablet {
-        text-align: left;
-        flex-direction: row;
-        // @include padding-left;
-    }
-
     &__logo {
         @include link;
         @include page-header;
@@ -35,16 +29,8 @@ h3 {
         align-items: center;
         width: 100%;
         color: $White;
-        // why add padding here? is it necessary? check style guide
-        @include padding-top-title;
 
-        @include tablet {
-            justify-content: flex-start;
-
-            // .section__titles {
-            //     @include padding-left;
-            // }
-        }
+        padding-top: 24px;
 
     }
 
@@ -59,7 +45,7 @@ h3 {
 
 
         &-title {
-            @include padding;
+            @include padding-left-right;
             position: absolute;
             top: 40%;
             color: $White;
@@ -70,17 +56,19 @@ h3 {
 
 .main {
     &__content {
-        @include padding;
+        @include padding-left-right;
     }
 
     &__title {
         // @include section-header;
-        @include padding-top-title;
-        @include padding;
+        padding-top: 24px;
+        @include padding-left-right;
 
         &--margin {
-            @include padding-bottom;
+            padding-bottom: 16px;
+
         }
+
     }
 }
 
@@ -90,35 +78,51 @@ h3 {
 }
 
 .section__titles {
-    display: inline-block; /* 确保文本宽度与内容一致 */
+    display: inline-block;
+    /* 确保文本宽度与内容一致 */
     color: $Mercury;
-    border-bottom: 4px solid transparent; /* 默认状态下的透明底边框 */
+    // border-bottom: 4px solid transparent;
+    /* 默认状态下的透明底边框 */
     @include subheader;
     @include link;
     padding: 0 140px;
 
-    &:hover {
-        color: $White;
-        font-weight: bold;
-        border-bottom-color: $White; /* 悬停时底边框变为白色 */
-    }
+    // &:hover {
+    //     color: $White;
+    //     font-weight: bold;
+    //     border-bottom-color: $White;
+    //     /* 悬停时底边框变为白色 */
+
+    // @include tablet {
+    //     justify-content: flex-start;
+    //     padding: 0;
+    // }
+    // }
 }
 
 // main 
 .musicians__image {
+    box-sizing: border-box; // 添加这行
+    display: block; // 确保元素是块级元素
     @include images;
-    @include padding-top;
-    @include padding-bottom;
+    padding-top: 16px;
+    padding-bottom: 16px;
 }
 
-.subtitle {
-    @include subheader;
-
+.musician__text {
+    @include tablet-musicians;
 }
 
-.paragraph {
-    @include body-copy;
+.text {
+    &__subtitle {
+        @include subheader;
+    }
+
+    &__paragraph {
+        @include body-copy;
+    }
 }
+
 
 .gallery__background {
     background-color: $Alabaster;
@@ -126,8 +130,8 @@ h3 {
 
 .photogallery {
     @include images;
-    @include padding-bottom;
-    @include padding;
+    padding-bottom: 16px;
+    @include padding-left-right;
 }
 
 .footer {
@@ -135,11 +139,12 @@ h3 {
     color: $White;
 
     &__info {
-        @include padding;
+        @include padding-left-right;
     }
 
-    &__content{
-        margin-bottom: 30px;;
+    &__content {
+        margin-bottom: 30px;
+        ;
     }
 }
 
@@ -148,8 +153,8 @@ h3 {
 }
 
 .social-media {
-    @include padding;
-    @include padding-top;
+    @include padding-left-right;
+    padding-top: 16px;
     display: flex;
     justify-content: flex-start;
     gap: 40px;
@@ -160,5 +165,62 @@ h3 {
 }
 
 .copyright {
-    @include padding;
+    @include padding-left-right;
+}
+
+
+@media (min-width: $tablet-break-point) {
+    .header {
+        text-align: left;
+        flex-direction: row;
+        @include tablet-padding-left-right;
+        padding-top: 36px;
+        padding-bottom: 36px;
+
+        &__sections {
+            justify-content: flex-start;
+            padding: 0 20px;
+            align-items: center;
+        }
+
+
+        &__image {
+            &-title {
+                @include tablet-padding-left-right;
+            }
+        }
+    }
+
+    .main {
+        &__content {
+            @include tablet-padding-left-right;
+        }
+
+        &__title {
+            padding-top: 48px;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+
+    .section__titles {
+        justify-content: flex-start;
+        padding: 0px 20px;
+    }
+
+    .musicians__image {
+        padding-top: 36px;
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    .text {
+        &__sections {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+    }
 }

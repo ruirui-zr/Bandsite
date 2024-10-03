@@ -29,12 +29,6 @@ h3 {
   flex-direction: column;
   align-items: center;
 }
-@media screen and (min-width: 768px) {
-  .header {
-    text-align: left;
-    flex-direction: row;
-  }
-}
 .header__logo {
   color: #FFFFFF;
   text-decoration: none;
@@ -53,11 +47,6 @@ h3 {
   width: 100%;
   color: #FFFFFF;
   padding-top: 24px;
-}
-@media screen and (min-width: 768px) {
-  .header__sections {
-    justify-content: flex-start;
-  }
 }
 .header__image {
   background-image: url("../assets/Images/hero-bio.jpg");
@@ -96,9 +85,10 @@ h3 {
 }
 
 .section__titles {
-  display: inline-block; /* 确保文本宽度与内容一致 */
+  display: inline-block;
+  /* 确保文本宽度与内容一致 */
   color: #E1E1E1;
-  border-bottom: 4px solid transparent; /* 默认状态下的透明底边框 */
+  /* 默认状态下的透明底边框 */
   font-size: 14px;
   line-height: 22px;
   font-weight: 600;
@@ -109,13 +99,10 @@ h3 {
 .section__titles:visited {
   color: #FFFFFF;
 }
-.section__titles:hover {
-  color: #FFFFFF;
-  font-weight: bold;
-  border-bottom-color: #FFFFFF; /* 悬停时底边框变为白色 */
-}
 
 .musicians__image {
+  box-sizing: border-box;
+  display: block;
   max-width: 100%;
   height: auto;
   display: block;
@@ -123,13 +110,17 @@ h3 {
   padding-bottom: 16px;
 }
 
-.subtitle {
+.musician__text {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+.text__subtitle {
   font-size: 14px;
   line-height: 22px;
   font-weight: 600;
 }
-
-.paragraph {
+.text__paragraph {
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
@@ -178,4 +169,48 @@ h3 {
 .copyright {
   padding-left: 16px;
   padding-right: 16px;
+}
+
+@media (min-width: 768px) {
+  .header {
+    text-align: left;
+    flex-direction: row;
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+  .header__sections {
+    justify-content: flex-start;
+    padding: 0 20px;
+    align-items: center;
+  }
+  .header__image-title {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+  .main__content {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+  .main__title {
+    padding-top: 48px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .section__titles {
+    justify-content: flex-start;
+    padding: 0px 20px;
+  }
+  .musicians__image {
+    padding-top: 36px;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+  .text__sections {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+  }
 }/*# sourceMappingURL=bio.css.map */
