@@ -4,7 +4,8 @@
 
 html,
 body,
-h1 {
+h1,
+h3 {
     margin: 0;
     padding: 0;
     font-family: "AvenirNextLTPro";
@@ -30,10 +31,12 @@ h1 {
     &__sections {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-evenly;
         align-items: center;
-        width: 80%;
+        width: 100%;
         color: $White;
+        // why add padding here? is it necessary? check style guide
+        @include padding-top-title;
 
         @include tablet {
             justify-content: flex-start;
@@ -53,9 +56,9 @@ h1 {
         width: 100%;
         height: 440px;
         position: relative;
-        @include margin-bottom;
 
-        &--modified {
+
+        &-title {
             @include padding;
             position: absolute;
             top: 40%;
@@ -71,28 +74,33 @@ h1 {
     }
 
     &__title {
-        @include section-header;
-        &--margin{
-            @include padding-bottom;
+        // @include section-header;
+        @include padding-top-title;
+        @include padding;
 
+        &--margin {
+            @include padding-bottom;
         }
     }
 }
 
+.quote {
+    @include body-copy;
+    font-weight: bold;
+}
+
 .section__titles {
-    height: 1px;
+    display: inline-block; /* 确保文本宽度与内容一致 */
     color: $Mercury;
+    border-bottom: 4px solid transparent; /* 默认状态下的透明底边框 */
     @include subheader;
     @include link;
-
-
-    &:active {
-        color: $White;
-    }
+    padding: 0 140px;
 
     &:hover {
         color: $White;
-        font-weight: 400;
+        font-weight: bold;
+        border-bottom-color: $White; /* 悬停时底边框变为白色 */
     }
 }
 
@@ -119,13 +127,38 @@ h1 {
 .photogallery {
     @include images;
     @include padding-bottom;
+    @include padding;
 }
 
 .footer {
     @include footer-copy;
     color: $White;
+
+    &__info {
+        @include padding;
+    }
+
+    &__content{
+        margin-bottom: 30px;;
+    }
 }
 
 .footer__background {
     background-color: $BandSite-Black;
+}
+
+.social-media {
+    @include padding;
+    @include padding-top;
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+
+    // &__logo{
+
+    // }
+}
+
+.copyright {
+    @include padding;
 }

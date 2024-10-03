@@ -29,8 +29,13 @@
     @content;
 }
 
-@mixin margin-bottom{
-    margin-bottom: 24px;
+@mixin padding-top-title{
+    padding-top: 24px;
+    @content;
+}
+
+@mixin padding-bottom-title{
+    padding-bottom: 24px;
     @content;
 }
 

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "AvenirNextLTPro";
   src: url(/assets/Font/AvenirNextLTPro-Regular.otf);
@@ -15,7 +16,8 @@
 }
 html,
 body,
-h1 {
+h1,
+h3 {
   margin: 0;
   padding: 0;
   font-family: "AvenirNextLTPro";
@@ -46,10 +48,11 @@ h1 {
 .header__sections {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  width: 80%;
+  width: 100%;
   color: #FFFFFF;
+  padding-top: 24px;
 }
 @media screen and (min-width: 768px) {
   .header__sections {
@@ -63,9 +66,8 @@ h1 {
   width: 100%;
   height: 440px;
   position: relative;
-  margin-bottom: 24px;
 }
-.header__image--modified {
+.header__image-title {
   padding-left: 16px;
   padding-right: 16px;
   position: absolute;
@@ -78,32 +80,39 @@ h1 {
   padding-right: 16px;
 }
 .main__title {
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 700;
+  padding-top: 24px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 .main__title--margin {
   padding-bottom: 16px;
 }
 
+.quote {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  font-weight: bold;
+}
+
 .section__titles {
-  height: 1px;
+  display: inline-block; /* 确保文本宽度与内容一致 */
   color: #E1E1E1;
+  border-bottom: 4px solid transparent; /* 默认状态下的透明底边框 */
   font-size: 14px;
   line-height: 22px;
   font-weight: 600;
   color: #FFFFFF;
   text-decoration: none;
+  padding: 0 140px;
 }
 .section__titles:visited {
   color: #FFFFFF;
 }
-.section__titles:active {
-  color: #FFFFFF;
-}
 .section__titles:hover {
   color: #FFFFFF;
-  font-weight: 400;
+  font-weight: bold;
+  border-bottom-color: #FFFFFF; /* 悬停时底边框变为白色 */
 }
 
 .musicians__image {
@@ -135,6 +144,8 @@ h1 {
   height: auto;
   display: block;
   padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .footer {
@@ -143,7 +154,28 @@ h1 {
   font-weight: 400;
   color: #FFFFFF;
 }
+.footer__info {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.footer__content {
+  margin-bottom: 30px;
+}
 
 .footer__background {
   background-color: #323232;
+}
+
+.social-media {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 40px;
+}
+
+.copyright {
+  padding-left: 16px;
+  padding-right: 16px;
 }/*# sourceMappingURL=bio.css.map */
