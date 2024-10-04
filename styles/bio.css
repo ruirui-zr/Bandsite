@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "AvenirNextLTPro";
   src: url(/assets/Font/AvenirNextLTPro-Regular.otf);
@@ -39,7 +38,7 @@ h3 {
 .header__logo:visited {
   color: #FFFFFF;
 }
-.header__sections {
+.header__nav {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -47,6 +46,18 @@ h3 {
   width: 100%;
   color: #FFFFFF;
   padding-top: 24px;
+}
+.header__nav-title {
+  color: #E1E1E1;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 0 140px;
+}
+.header__nav-title:visited {
+  color: #FFFFFF;
 }
 .header__image {
   background-image: url("../assets/Images/hero-bio.jpg");
@@ -77,30 +88,7 @@ h3 {
   padding-bottom: 16px;
 }
 
-.quote {
-  font-size: 13px;
-  line-height: 18px;
-  font-weight: 400;
-  font-weight: bold;
-}
-
-.section__titles {
-  display: inline-block;
-  /* 确保文本宽度与内容一致 */
-  color: #E1E1E1;
-  /* 默认状态下的透明底边框 */
-  font-size: 14px;
-  line-height: 22px;
-  font-weight: 600;
-  color: #FFFFFF;
-  text-decoration: none;
-  padding: 0 140px;
-}
-.section__titles:visited {
-  color: #FFFFFF;
-}
-
-.musicians__image {
+.musician__image {
   box-sizing: border-box;
   display: block;
   max-width: 100%;
@@ -109,18 +97,23 @@ h3 {
   padding-top: 16px;
   padding-bottom: 16px;
 }
-
 .musician__text {
   padding-left: 48px;
   padding-right: 48px;
 }
+.musician__quote {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  font-weight: bold;
+}
 
-.text__subtitle {
+.paragraph__subtitle {
   font-size: 14px;
   line-height: 22px;
   font-weight: 600;
 }
-.text__paragraph {
+.paragraph__text {
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
@@ -145,13 +138,6 @@ h3 {
   font-weight: 400;
   color: #FFFFFF;
 }
-.footer__info {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-.footer__content {
-  margin-bottom: 30px;
-}
 
 .footer__background {
   background-color: #323232;
@@ -164,6 +150,21 @@ h3 {
   display: flex;
   justify-content: flex-start;
   gap: 40px;
+}
+
+.contact .main__content {
+  padding-left: 36px;
+  padding-right: 36px;
+}
+.contact .main__title {
+  padding-top: 48px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.contact .musicians__image {
+  padding-top: 36px;
+  padding-left: 48px;
+  padding-right: 48px;
 }
 
 .copyright {
@@ -180,10 +181,14 @@ h3 {
     padding-top: 36px;
     padding-bottom: 36px;
   }
-  .header__sections {
+  .header__nav {
     justify-content: flex-start;
     padding: 0 20px;
     align-items: center;
+  }
+  .header__nav-title {
+    justify-content: flex-start;
+    padding: 0px 20px;
   }
   .header__image-title {
     padding-left: 36px;
@@ -198,16 +203,12 @@ h3 {
     padding-left: 0px;
     padding-right: 0px;
   }
-  .section__titles {
-    justify-content: flex-start;
-    padding: 0px 20px;
-  }
-  .musicians__image {
+  .musician__image {
     padding-top: 36px;
     padding-left: 48px;
     padding-right: 48px;
   }
-  .text__sections {
+  .paragraph__sections {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
