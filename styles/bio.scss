@@ -37,7 +37,7 @@ h3 {
             color: $Mercury;
             @include subheader;
             @include link;
-            padding: 0 140px;
+            // padding: 0 140px;
         }
     }
 
@@ -67,9 +67,10 @@ h3 {
     }
 
     &__title {
-        // @include section-header;
+        @include section-header;
         padding-top: 24px;
         @include padding-left-right;
+
 
         &--margin {
             padding-bottom: 16px;
@@ -80,7 +81,7 @@ h3 {
 }
 
 
-// main 
+
 .musician{
     &__image {
     box-sizing: border-box; // 添加这行
@@ -121,6 +122,10 @@ h3 {
     @include padding-left-right;
 }
 
+.photo{
+    width:100%;
+}
+
 .footer {
     @include footer-copy;
     color: $White;
@@ -130,7 +135,7 @@ h3 {
     background-color: $BandSite-Black;
 }
 
-.social-media {
+.apps {
     @include padding-left-right;
     padding-top: 16px;
     display: flex;
@@ -164,6 +169,14 @@ h3 {
 
 .copyright {
     @include padding-left-right;
+}
+
+.copyright--tablet{
+    display: none;
+}
+
+.copyright--mobile{
+    display: content;
 }
 
 
@@ -201,17 +214,22 @@ h3 {
         }
 
         &__title {
+            
             padding-top: 48px;
-            padding-left: 0px;
-            padding-right: 0px;
+            padding-bottom: 24px;
         }
     }
 
-    .musician__image {
-        padding-top: 36px;
+    .musician{
+        &__image {
+        @include tablet-padding-left-right;
         padding-left: 48px;
         padding-right: 48px;
     }
+    &__text{
+        padding-bottom: 32px;
+    }
+}
 
     .paragraph {
         &__sections {
@@ -220,6 +238,52 @@ h3 {
             justify-content: space-between;
             gap: 15px;
         }
+        &__text{
+            padding-top: 16px;
+        }
 
+    }
+
+    .photogallery{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .photo{
+        width: 30%;
+        padding-bottom: 24px;
+    }
+
+    .footer{
+        @include tablet-padding-left-right;
+
+    }
+    .social-media{
+        display:flex;
+    }
+
+    .apps{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .copyright--tablet {
+        display:contents;
+      }
+
+    .contact{
+        &__info{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 16px;
+            
+        }
+    }
+
+    .copyright--mobile{
+        display: none;
     }
 }
