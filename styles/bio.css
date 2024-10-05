@@ -31,9 +31,9 @@ h3 {
 .header__logo {
   color: #FFFFFF;
   text-decoration: none;
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
 }
 .header__logo:visited {
   color: #FFFFFF;
@@ -49,9 +49,9 @@ h3 {
 }
 .header__nav-title {
   color: #E1E1E1;
-  font-size: 14px;
-  line-height: 22px;
-  font-weight: 600;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
   color: #FFFFFF;
   text-decoration: none;
 }
@@ -59,7 +59,7 @@ h3 {
   color: #FFFFFF;
 }
 .header__image {
-  background-image: url("../assets/Images/hero-bio.jpg");
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/Images/hero-bio.jpg");
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -69,6 +69,9 @@ h3 {
 .header__image-title {
   padding-left: 16px;
   padding-right: 16px;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
   position: absolute;
   top: 40%;
   color: #FFFFFF;
@@ -78,7 +81,7 @@ h3 {
   padding-left: 16px;
   padding-right: 16px;
 }
-.main__title {
+.main__subtitle {
   font-size: 24px;
   line-height: 32px;
   font-weight: 700;
@@ -86,7 +89,7 @@ h3 {
   padding-left: 16px;
   padding-right: 16px;
 }
-.main__title--margin {
+.main__subtitle--margin {
   padding-bottom: 16px;
 }
 
@@ -110,7 +113,7 @@ h3 {
   font-weight: bold;
 }
 
-.paragraph__subtitle {
+.paragraph__subheader {
   font-size: 14px;
   line-height: 22px;
   font-weight: 600;
@@ -195,6 +198,11 @@ h3 {
     padding-top: 36px;
     padding-bottom: 36px;
   }
+  .header__logo {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+  }
   .header__nav {
     justify-content: flex-start;
     padding: 0 20px;
@@ -203,18 +211,34 @@ h3 {
   .header__nav-title {
     justify-content: flex-start;
     padding: 0px 20px;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
   }
   .header__image-title {
     padding-left: 36px;
     padding-right: 36px;
+    font-size: 60px;
+    line-height: 68px;
+    font-weight: 700;
   }
   .main__content {
     padding-left: 36px;
     padding-right: 36px;
   }
-  .main__title {
+  .main__subtitle {
+    padding-left: 0;
     padding-top: 48px;
     padding-bottom: 24px;
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+  }
+  .musician__quote {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    font-weight: bold;
   }
   .musician__image {
     padding-left: 36px;
@@ -225,6 +249,11 @@ h3 {
   .musician__text {
     padding-bottom: 32px;
   }
+  .paragraph__subheader {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+  }
   .paragraph__sections {
     display: flex;
     flex-direction: row;
@@ -233,11 +262,16 @@ h3 {
   }
   .paragraph__text {
     padding-top: 16px;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
   }
   .photogallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding-left: 0px;
+    padding-right: 0px;
   }
   .photo {
     width: 30%;
@@ -254,6 +288,11 @@ h3 {
     justify-content: center;
     align-items: center;
   }
+  .footer {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+  }
   .copyright--tablet {
     display: contents;
   }
@@ -262,9 +301,34 @@ h3 {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-left: 16px;
+  }
+  .copyright {
+    padding-left: 0;
+    padding-bottom: 80px;
   }
   .copyright--mobile {
     display: none;
+  }
+}
+@media (min-width: 1280px) {
+  .header {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+  .header__image-title {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+  .main__content {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+  .musician__image {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+  .footer {
+    padding-left: 160px;
+    padding-right: 160px;
   }
 }/*# sourceMappingURL=bio.css.map */

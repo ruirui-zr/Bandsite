@@ -19,7 +19,7 @@ h3 {
 
     &__logo {
         @include link;
-        @include page-header;
+        @include subheader;
     }
 
     &__nav {
@@ -31,11 +31,11 @@ h3 {
         color: $White;
         padding-top: 24px;
 
-        &-title{
+        &-title {
             // display: inline-block;
             // /* 确保文本宽度与内容一致 */
             color: $Mercury;
-            @include subheader;
+            @include body-copy;
             @include link;
             // padding: 0 140px;
         }
@@ -43,7 +43,8 @@ h3 {
 
 
     &__image {
-        background-image: url("../assets/Images/hero-bio.jpg");
+        background: linear-gradient(rgba($BandSite-Black, 0.5), rgba($BandSite-Black, 0.5)),
+    url("../assets/Images/hero-bio.jpg");
         background-position: center;
         background-size: cover;
         width: 100%;
@@ -53,6 +54,7 @@ h3 {
 
         &-title {
             @include padding-left-right;
+            @include page-header;
             position: absolute;
             top: 40%;
             color: $White;
@@ -66,8 +68,9 @@ h3 {
         @include padding-left-right;
     }
 
-    &__title {
+    &__subtitle {
         @include section-header;
+        // @include subheader;
         padding-top: 24px;
         @include padding-left-right;
 
@@ -82,26 +85,27 @@ h3 {
 
 
 
-.musician{
+.musician {
     &__image {
-    box-sizing: border-box; // 添加这行
-    display: block; // 确保元素是块级元素
-    @include images;
-    padding-top: 16px;
-    padding-bottom: 16px;}
+        box-sizing: border-box; // 添加这行
+        display: block; // 确保元素是块级元素
+        @include images;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
 
     &__text {
         @include tablet-musicians;
     }
 
-    &__quote{
+    &__quote {
         @include body-copy;
         font-weight: bold;
     }
 }
 
 .paragraph {
-    &__subtitle {
+    &__subheader {
         @include subheader;
     }
 
@@ -122,8 +126,8 @@ h3 {
     @include padding-left-right;
 }
 
-.photo{
-    width:100%;
+.photo {
+    width: 100%;
 }
 
 .footer {
@@ -147,7 +151,7 @@ h3 {
     // }
 }
 
-.contact{
+.contact {
     .main {
         &__content {
             @include tablet-padding-left-right;
@@ -171,11 +175,11 @@ h3 {
     @include padding-left-right;
 }
 
-.copyright--tablet{
+.copyright--tablet {
     display: none;
 }
 
-.copyright--mobile{
+.copyright--mobile {
     display: content;
 }
 
@@ -189,23 +193,30 @@ h3 {
         padding-top: 36px;
         padding-bottom: 36px;
 
+        &__logo {
+            @include tablet-desktop-subheader;
+        }
+
         &__nav {
             justify-content: flex-start;
             padding: 0 20px;
             align-items: center;
 
-            &-title{
+            &-title {
                 justify-content: flex-start;
                 padding: 0px 20px;
+                @include tablet-desktop-body-copy;
             }
         }
-
 
         &__image {
             &-title {
                 @include tablet-padding-left-right;
+                @include tablet-desktop-page-header;
             }
         }
+
+
     }
 
     .main {
@@ -213,77 +224,129 @@ h3 {
             @include tablet-padding-left-right;
         }
 
-        &__title {
-            
+        &__subtitle {
+            padding-left: 0;
             padding-top: 48px;
             padding-bottom: 24px;
+            @include tablet-desktop-section-header;
         }
     }
 
-    .musician{
+    .musician {
+        &__quote {
+            @include tablet-desktop-body-copy;
+            font-weight: bold;
+        }
+
         &__image {
-        @include tablet-padding-left-right;
-        padding-left: 48px;
-        padding-right: 48px;
+            @include tablet-padding-left-right;
+            padding-left: 48px;
+            padding-right: 48px;
+        }
+
+        &__text {
+            padding-bottom: 32px;
+        }
     }
-    &__text{
-        padding-bottom: 32px;
-    }
-}
 
     .paragraph {
+        &__subheader {
+            @include tablet-desktop-subheader;
+        }
+
         &__sections {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             gap: 15px;
         }
-        &__text{
+
+        &__text {
             padding-top: 16px;
+            @include tablet-desktop-body-copy;
         }
 
     }
 
-    .photogallery{
-        display:flex;
+    .photogallery {
+        display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: space-between;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
-    .photo{
+    .photo {
         width: 30%;
         padding-bottom: 24px;
     }
 
-    .footer{
+    .footer {
         @include tablet-padding-left-right;
 
     }
-    .social-media{
-        display:flex;
+
+    .social-media {
+        display: flex;
     }
 
-    .apps{
+    .apps {
         justify-content: center;
         align-items: center;
     }
 
-    .copyright--tablet {
-        display:contents;
-      }
+    .footer{
+        @include tablet-desktop-footer-copy;
+    }
 
-    .contact{
-        &__info{
+    .copyright--tablet {
+        display: contents;
+    }
+
+    .contact {
+        &__info {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            padding-left: 16px;
-            
+
         }
     }
 
-    .copyright--mobile{
+    .copyright {
+        padding-left: 0;
+        padding-bottom: 80px;
+    }
+
+    .copyright--mobile {
         display: none;
+    }
+}
+
+@media (min-width: $desktop-break-point) {
+    .header {
+        @include desktop-padding-left-right;
+
+        &__image {
+            &-title {
+                @include desktop-padding-left-right;
+            }
+        }
+    }
+
+    .main {
+        &__content {
+            @include desktop-padding-left-right;
+        }
+    }
+
+    .musician {
+        &__image {
+            @include desktop-padding-left-right;
+        }
+    }
+
+    .footer {
+        @include desktop-padding-left-right;
     }
 }

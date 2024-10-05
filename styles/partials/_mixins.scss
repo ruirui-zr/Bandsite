@@ -26,6 +26,12 @@
     @content;
 }
 
+@mixin desktop-padding-left-right{
+    padding-left: 160px;
+    padding-right: 160px;
+    @content;
+}
+
 // a bundle padding for the musician part in tablet screen
 @mixin tablet-musicians{
     padding-left: 48px;
