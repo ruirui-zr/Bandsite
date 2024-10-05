@@ -15,8 +15,8 @@
 
 // padding & margins
 @mixin padding-left-right{
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 28px;
+    padding-right: 28px;
     @content;
 }
 
@@ -33,10 +33,10 @@
 }
 
 // a bundle padding for the musician part in tablet screen
-@mixin tablet-musicians{
-    padding-left: 48px;
-    padding-right: 48px;
-}
+// @mixin tablet-musicians{
+//     padding-left: 48px;
+//     padding-right: 48px;
+// }
 
 
 @mixin link {

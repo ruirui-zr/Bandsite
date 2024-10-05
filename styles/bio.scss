@@ -16,10 +16,14 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 40px;
 
     &__logo {
         @include link;
-        @include subheader;
+        // @include subheader;
+        font-size: 45px;
+        line-height: 22px;
+        font-weight: 100;
     }
 
     &__nav {
@@ -29,35 +33,50 @@ h3 {
         align-items: center;
         width: 100%;
         color: $White;
-        padding-top: 24px;
+        padding-top: 16px;
 
         &-title {
             // display: inline-block;
             // /* 确保文本宽度与内容一致 */
             color: $Mercury;
-            @include body-copy;
+            // @include body-copy;
             @include link;
-            // padding: 0 140px;
+            font-size: 26px;
+            display: flex;
+            justify-content: center;
+            font-weight: 100;
+            padding-bottom: 28px;
+
+            &--bio {
+                padding-right: 100px;
+            }
+
+            &--shows {
+                padding-right: 10px;
+            }
+
         }
     }
 
 
     &__image {
         background: linear-gradient(rgba($BandSite-Black, 0.5), rgba($BandSite-Black, 0.5)),
-    url("../assets/Images/hero-bio.jpg");
+            url("../assets/Images/hero-bio.jpg");
         background-position: center;
         background-size: cover;
         width: 100%;
-        height: 440px;
+        height: 370px;
         position: relative;
 
 
         &-title {
             @include padding-left-right;
-            @include page-header;
+            // @include page-header;
             position: absolute;
             top: 40%;
             color: $White;
+            font-size: 48px;
+            font-weight: 510;
         }
     }
 
@@ -71,68 +90,106 @@ h3 {
     &__subtitle {
         @include section-header;
         // @include subheader;
-        padding-top: 24px;
-        @include padding-left-right;
-
+        font-size: 48px;
+        font-weight: 600;
+        padding-top: 48px;
+        padding-bottom: 36px;
+        // @include padding-left-right;
 
         &--margin {
             padding-bottom: 16px;
-
         }
 
     }
 }
 
-
-
 .musician {
+    &__image-container{
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 320px;
+    }
+    
     &__image {
-        box-sizing: border-box; // 添加这行
-        display: block; // 确保元素是块级元素
-        @include images;
+        box-sizing: border-box; 
+        display: block;
+        width: 100%;
         padding-top: 16px;
         padding-bottom: 16px;
+        transform: translateY(-23%);
     }
 
-    &__text {
-        @include tablet-musicians;
-    }
+    // &__text {
+    //     @include tablet-musicians;
+    // }
 
     &__quote {
-        @include body-copy;
-        font-weight: bold;
+        // @include body-copy;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 1.5;
+        margin: 0;
+        color: $BandSite-Black;
+
+        &--name{
+            padding-top: 10px;
+        }
     }
 }
 
 .paragraph {
     &__subheader {
-        @include subheader;
+        // @include subheader;
+        font-size: 26px;
+        line-height: 22px;
+        padding-top: 32px;
     }
 
     // &__sections
     &__text {
-        @include body-copy;
+        // @include body-copy;
+        font-size: 25px;
+        line-height: 1.45;
+        font-weight: 400;
+        padding-top: 8px;
+
+        &--modified{
+            padding-top: 35px;
+        }
     }
 }
 
 
 .gallery__background {
     background-color: $Alabaster;
+    margin-top: 30px;
 }
 
 .photogallery {
     @include images;
-    padding-bottom: 16px;
-    @include padding-left-right;
+    // padding-bottom: 16px;
+    // @include padding-left-right;
 }
 
 .photo {
     width: 100%;
+    padding-bottom: 26px;
 }
 
 .footer {
-    @include footer-copy;
+    // @include footer-copy;
+    padding-left: 28px;
     color: $White;
+    font-size: 24px;
+
+    &__subtitle{
+        line-height: 32px;
+        font-size: 48px;
+        font-weight: 600;
+        padding-top: 56px;
+        padding-bottom: 36px;
+    }
 }
 
 .footer__background {
@@ -140,39 +197,46 @@ h3 {
 }
 
 .apps {
-    @include padding-left-right;
+    // @include padding-left-right;
     padding-top: 16px;
     display: flex;
     justify-content: flex-start;
-    gap: 40px;
+    gap: 52px;
 
     // &__logo{
 
     // }
 }
 
-.contact {
-    .main {
-        &__content {
-            @include tablet-padding-left-right;
-        }
-
-        &__title {
-            padding-top: 48px;
-            padding-left: 0px;
-            padding-right: 0px;
-        }
-    }
-
-    .musicians__image {
-        padding-top: 36px;
-        padding-left: 48px;
-        padding-right: 48px;
-    }
+.social-media__logo{
+    width: 45px;
+    height: 45px;
 }
 
+.contact {
+    // &__content {
+    //         @include tablet-padding-left-right;
+    //     }
+
+    &__title {
+        padding-top: 20px;
+        font-weight: 600;
+
+        &--modified{
+            padding-top: 32px;
+        }
+        }
+
+    &__detail{
+            padding-top: 15px;
+        }
+    }
+
+
 .copyright {
-    @include padding-left-right;
+    // @include padding-left-right;
+    padding-bottom: 54px;
+    font-size: 22px;
 }
 
 .copyright--tablet {
@@ -181,6 +245,8 @@ h3 {
 
 .copyright--mobile {
     display: content;
+    padding-top: 50px;
+    font-weight: 100;
 }
 
 
@@ -295,7 +361,7 @@ h3 {
         align-items: center;
     }
 
-    .footer{
+    .footer {
         @include tablet-desktop-footer-copy;
     }
 

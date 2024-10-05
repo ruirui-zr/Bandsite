@@ -27,13 +27,14 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 40px;
 }
 .header__logo {
   color: #FFFFFF;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 45px;
   line-height: 22px;
-  font-weight: 600;
+  font-weight: 100;
 }
 .header__logo:visited {
   color: #FFFFFF;
@@ -45,107 +46,129 @@ h3 {
   align-items: center;
   width: 100%;
   color: #FFFFFF;
-  padding-top: 24px;
+  padding-top: 16px;
 }
 .header__nav-title {
   color: #E1E1E1;
-  font-size: 13px;
-  line-height: 18px;
-  font-weight: 400;
   color: #FFFFFF;
   text-decoration: none;
+  font-size: 26px;
+  display: flex;
+  justify-content: center;
+  font-weight: 100;
+  padding-bottom: 28px;
 }
 .header__nav-title:visited {
   color: #FFFFFF;
+}
+.header__nav-title--bio {
+  padding-right: 100px;
+}
+.header__nav-title--shows {
+  padding-right: 10px;
 }
 .header__image {
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/Images/hero-bio.jpg");
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 440px;
+  height: 370px;
   position: relative;
 }
 .header__image-title {
-  padding-left: 16px;
-  padding-right: 16px;
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 700;
+  padding-left: 28px;
+  padding-right: 28px;
   position: absolute;
   top: 40%;
   color: #FFFFFF;
+  font-size: 48px;
+  font-weight: 510;
 }
 
 .main__content {
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 28px;
+  padding-right: 28px;
 }
 .main__subtitle {
   font-size: 24px;
   line-height: 32px;
   font-weight: 700;
-  padding-top: 24px;
-  padding-left: 16px;
-  padding-right: 16px;
+  font-size: 48px;
+  font-weight: 600;
+  padding-top: 48px;
+  padding-bottom: 36px;
 }
 .main__subtitle--margin {
   padding-bottom: 16px;
 }
 
+.musician__image-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 320px;
+}
 .musician__image {
   box-sizing: border-box;
   display: block;
-  max-width: 100%;
-  height: auto;
-  display: block;
+  width: 100%;
   padding-top: 16px;
   padding-bottom: 16px;
-}
-.musician__text {
-  padding-left: 48px;
-  padding-right: 48px;
+  transform: translateY(-23%);
 }
 .musician__quote {
-  font-size: 13px;
-  line-height: 18px;
-  font-weight: 400;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.5;
+  margin: 0;
+  color: #323232;
+}
+.musician__quote--name {
+  padding-top: 10px;
 }
 
 .paragraph__subheader {
-  font-size: 14px;
+  font-size: 26px;
   line-height: 22px;
-  font-weight: 600;
+  padding-top: 32px;
 }
 .paragraph__text {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 25px;
+  line-height: 1.45;
   font-weight: 400;
+  padding-top: 8px;
+}
+.paragraph__text--modified {
+  padding-top: 35px;
 }
 
 .gallery__background {
   background-color: #FAFAFA;
+  margin-top: 30px;
 }
 
 .photogallery {
   max-width: 100%;
   height: auto;
   display: block;
-  padding-bottom: 16px;
-  padding-left: 16px;
-  padding-right: 16px;
 }
 
 .photo {
   width: 100%;
+  padding-bottom: 26px;
 }
 
 .footer {
-  font-size: 13px;
-  line-height: 18px;
-  font-weight: 400;
+  padding-left: 28px;
   color: #FFFFFF;
+  font-size: 24px;
+}
+.footer__subtitle {
+  line-height: 32px;
+  font-size: 48px;
+  font-weight: 600;
+  padding-top: 56px;
+  padding-bottom: 36px;
 }
 
 .footer__background {
@@ -153,32 +176,31 @@ h3 {
 }
 
 .apps {
-  padding-left: 16px;
-  padding-right: 16px;
   padding-top: 16px;
   display: flex;
   justify-content: flex-start;
-  gap: 40px;
+  gap: 52px;
 }
 
-.contact .main__content {
-  padding-left: 36px;
-  padding-right: 36px;
+.social-media__logo {
+  width: 45px;
+  height: 45px;
 }
-.contact .main__title {
-  padding-top: 48px;
-  padding-left: 0px;
-  padding-right: 0px;
+
+.contact__title {
+  padding-top: 20px;
+  font-weight: 600;
 }
-.contact .musicians__image {
-  padding-top: 36px;
-  padding-left: 48px;
-  padding-right: 48px;
+.contact__title--modified {
+  padding-top: 32px;
+}
+.contact__detail {
+  padding-top: 15px;
 }
 
 .copyright {
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-bottom: 54px;
+  font-size: 22px;
 }
 
 .copyright--tablet {
@@ -187,6 +209,8 @@ h3 {
 
 .copyright--mobile {
   display: content;
+  padding-top: 50px;
+  font-weight: 100;
 }
 
 @media (min-width: 768px) {
