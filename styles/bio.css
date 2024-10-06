@@ -68,7 +68,7 @@ h3 {
 .header__nav--bio::after {
   position: absolute;
   content: "";
-  width: 50vw;
+  width: 49vw;
   height: 12px;
   background-color: white;
   bottom: -5px;
@@ -76,13 +76,12 @@ h3 {
   transform: scaleX(0);
 }
 .header__nav--bio:hover::after {
-  width: 50vw;
   transform: scaleX(1);
 }
 .header__nav--shows::after {
   position: absolute;
   content: "";
-  width: 50vw;
+  width: 49vw;
   height: 12px;
   background-color: white;
   bottom: -5px;
@@ -261,6 +260,41 @@ h3 {
     font-weight: 400;
     padding: 0px 0px;
     padding-left: 3.125rem;
+    display: inline-block;
+  }
+  .header__nav--bio {
+    position: relative;
+    display: inline-block;
+  }
+  .header__nav--bio::after {
+    position: absolute;
+    content: "";
+    width: 60%;
+    height: 4px;
+    background-color: white;
+    bottom: -25px;
+    left: 50px;
+    transform: scaleX(0);
+  }
+  .header__nav--bio:hover::after {
+    transform: scaleX(1);
+  }
+  .header__nav--shows {
+    position: relative;
+    display: inline-block;
+  }
+  .header__nav--shows::after {
+    position: absolute;
+    content: "";
+    width: 60%;
+    height: 4px;
+    background-color: white;
+    bottom: -25px;
+    left: 45px;
+    transform: scaleX(0);
+  }
+  .header__nav--shows:hover::after {
+    transform: scaleX(1);
   }
   .header__image {
     height: 28.125rem;

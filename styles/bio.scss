@@ -39,47 +39,48 @@ h3 {
             // position: relative;
             color: $Mercury;
             @include link;
-            font-size: 1.625rem; 
+            font-size: 1.625rem;
             display: flex;
             justify-content: flex-start;
             font-weight: 100;
             padding-bottom: 2.75rem;
 
-            &:hover{
+            &:hover {
                 font-weight: 600;
             }
         }
 
-        &--bio::after{
-                position: absolute;
-                content: "";
-                width: 50vw;
-                height: 12px;
-                background-color: white;
-                bottom: -5px;
-                left: 0;
-                transform:scaleX(0);
-            }
-        &--bio:hover::after{
-                width: 50vw;
-                transform: scaleX(1);
-            }
-
-        &--shows::after{
-                position: absolute;
-                content: "";
-                width: 50vw;
-                height: 12px;
-                background-color: white;
-                bottom: -5px;
-                right: 0;
-                transform:scaleX(0);
-            }
-        &--shows:hover::after{
-                transform: scaleX(1);
-            }
+        &--bio::after {
+            position: absolute;
+            content: "";
+            width: 49vw;
+            height: 12px;
+            background-color: white;
+            bottom: -5px;
+            left: 0;
+            transform: scaleX(0);
         }
-    
+
+        &--bio:hover::after {
+            transform: scaleX(1);
+        }
+
+        &--shows::after {
+            position: absolute;
+            content: "";
+            width: 49vw;
+            height: 12px;
+            background-color: white;
+            bottom: -5px;
+            right: 0;
+            transform: scaleX(0);
+        }
+
+        &--shows:hover::after {
+            transform: scaleX(1);
+        }
+    }
+
 
     &__image {
         background: linear-gradient(rgba($BandSite-Black, 0.5), rgba($BandSite-Black, 0.5)),
@@ -123,15 +124,15 @@ h3 {
 }
 
 .musician {
-    &__image-container{
+    &__image-container {
         position: relative;
         overflow: hidden;
         width: 100%;
         height: 20rem;
     }
-    
+
     &__image {
-        box-sizing: border-box; 
+        box-sizing: border-box;
         display: block;
         width: 100%;
         padding-top: 1rem;
@@ -145,7 +146,7 @@ h3 {
         margin: 0;
         color: $BandSite-Black;
 
-        &--name{
+        &--name {
             padding-top: 0.625rem;
         }
     }
@@ -164,7 +165,7 @@ h3 {
         font-weight: 400;
         padding-top: 0.5rem;
 
-        &--modified{
+        &--modified {
             padding-top: 2.1875rem;
         }
     }
@@ -190,11 +191,11 @@ h3 {
     color: $White;
     font-size: 1.5rem;
 
-    &__subtitle{
+    &__subtitle {
         line-height: 2rem;
         font-size: 3rem;
         font-weight: 600;
-        padding-top:3.5rem;
+        padding-top: 3.5rem;
         padding-bottom: 2.25rem;
     }
 }
@@ -214,7 +215,7 @@ h3 {
     // }
 }
 
-.social-media__logo{
+.social-media__logo {
     width: 2.8125rem;
     height: 2.8125rem;
 }
@@ -224,15 +225,15 @@ h3 {
         padding-top: 1.25rem;
         font-weight: 600;
 
-        &--modified{
+        &--modified {
             padding-top: 2rem;
         }
-        }
-
-    &__detail{
-            padding-top: 0.9375rem;
-        }
     }
+
+    &__detail {
+        padding-top: 0.9375rem;
+    }
+}
 
 
 .copyright {
@@ -278,6 +279,47 @@ h3 {
                 @include tablet-desktop-body-copy;
                 padding: 0px 0px;
                 padding-left: 3.125rem;
+                display: inline-block;
+            }
+
+            &--bio {
+                position: relative; // 确保伪元素相对于父元素定位
+                display: inline-block; // 使父元素宽度适应内容
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 60%;
+                    height: 4px;
+                    background-color: white;
+                    bottom: -25px;
+                    left: 50px;
+                    transform: scaleX(0);
+                }
+
+                &:hover::after {
+                    transform: scaleX(1);
+                }
+            }
+
+            &--shows {
+                position: relative; // 确保伪元素相对于父元素定位
+                display: inline-block; // 使父元素宽度适应内容
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 60%;
+                    height: 4px;
+                    background-color: white;
+                    bottom: -25px;
+                    left: 45px;
+                    transform: scaleX(0);
+                }
+
+                &:hover::after {
+                    transform: scaleX(1);
+                }
             }
         }
 
@@ -313,19 +355,19 @@ h3 {
             line-height: 1.3;
             padding-top: 1.75rem;
 
-            &--name{
+            &--name {
                 padding-top: 0.625rem;
                 font-weight: 600;
                 font-size: 1rem;
             }
         }
 
-        &__image-container{
+        &__image-container {
             height: 19.375rem;
         }
 
         &__image {
-            padding-left:3rem;
+            padding-left: 3rem;
             padding-right: 3rem;
             // transform: translateY(-14%);
         }
@@ -368,20 +410,21 @@ h3 {
 
     .footer {
         @include tablet-padding-left-right;
-        &__subtitle{
+
+        &__subtitle {
             font-size: 2.25rem;
             line-height: 2.75rem;
-            padding-top:2.625rem;
+            padding-top: 2.625rem;
             padding-bottom: 0;
         }
     }
 
-    .social-media{
+    .social-media {
         display: flex;
-        align-items: center; 
+        align-items: center;
         gap: 1.875rem;
 
-        &__logo{
+        &__logo {
             width: 1.5625rem;
             height: 1.5625rem;
         }
@@ -413,8 +456,10 @@ h3 {
             justify-content: space-between;
             align-items: center;
         }
+
         &__title--modified {
-            padding-top: 1.25rem;}
+            padding-top: 1.25rem;
+        }
     }
 
     .copyright {
