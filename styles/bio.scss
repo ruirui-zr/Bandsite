@@ -250,17 +250,22 @@ h3 {
 }
 
 
-
+// tablet version
+// tablet version
+// tablet version
+// tablet version
+// tablet version
 @media (min-width: $tablet-break-point) {
     .header {
         text-align: left;
         flex-direction: row;
         @include tablet-padding-left-right;
-        padding-top: 36px;
-        padding-bottom: 36px;
+        padding-top: 16px;
+        padding-bottom: 16px;
 
         &__logo {
-            @include tablet-desktop-subheader;
+            // @include tablet-desktop-subheader;
+            font-size: 24px;
         }
 
         &__nav {
@@ -270,15 +275,20 @@ h3 {
 
             &-title {
                 justify-content: flex-start;
-                padding: 0px 20px;
                 @include tablet-desktop-body-copy;
+                padding: 0px 0px;
+                padding-left: 50px;
             }
         }
 
         &__image {
+            height: 450px;
+
             &-title {
                 @include tablet-padding-left-right;
-                @include tablet-desktop-page-header;
+                // @include tablet-desktop-page-header;
+                font-size: 60px;
+                line-height: 68px;
             }
         }
 
@@ -294,41 +304,59 @@ h3 {
             padding-left: 0;
             padding-top: 48px;
             padding-bottom: 24px;
-            @include tablet-desktop-section-header;
+            // @include tablet-desktop-section-header;
+            font-size: 36px;
+            line-height: 44px;
+            color: $BandSite-Black;
         }
     }
 
     .musician {
         &__quote {
-            @include tablet-desktop-body-copy;
-            font-weight: bold;
+            // @include tablet-desktop-body-copy;
+            font-size: 22px;
+            line-height: 1.3;
+            padding-top: 28px;
+
+            &--name{
+                padding-top: 10px;
+                font-weight: 600;
+                font-size: 16px;
+            }
+        }
+
+        &__image-container{
+            height: 310px;
         }
 
         &__image {
-            @include tablet-padding-left-right;
+            // @include tablet-padding-left-right;
             padding-left: 48px;
             padding-right: 48px;
+            transform: translateY(-14%);
         }
 
         &__text {
-            padding-bottom: 32px;
+            padding-left: 48px;
+            padding-right: 48px;
         }
     }
 
     .paragraph {
-        &__subheader {
-            @include tablet-desktop-subheader;
-        }
+        // &__subheader {
+        //     // @include tablet-desktop-subheader;
+
+        // }
 
         &__sections {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            gap: 15px;
+            gap: 20px;
         }
 
         &__text {
-            padding-top: 16px;
+            padding-top: 0px;
             @include tablet-desktop-body-copy;
         }
 
@@ -340,25 +368,41 @@ h3 {
         justify-content: space-between;
         padding-left: 0px;
         padding-right: 0px;
+        padding-bottom: 16px;
     }
 
     .photo {
         width: 30%;
-        padding-bottom: 24px;
+        padding-bottom: 22px;
+        height: 124px;
     }
 
     .footer {
         @include tablet-padding-left-right;
-
+        &__subtitle{
+            font-size: 36px;
+            line-height: 44px;
+            padding-top: 42px;
+            padding-bottom: 0;
+        }
     }
 
-    .social-media {
+    .social-media{
         display: flex;
+        align-items: center; 
+        gap: 30px;
+
+        &__logo{
+            width: 25px;
+            height: 25px;
+        }
     }
 
     .apps {
         justify-content: center;
         align-items: center;
+        gap: 24px;
+        padding-top: 50px;
     }
 
     .footer {
@@ -366,7 +410,11 @@ h3 {
     }
 
     .copyright--tablet {
-        display: contents;
+        display: block;
+        margin-left: auto;
+        font-weight: 100;
+        font-size: 24px;
+        padding-top: 40px;
     }
 
     .contact {
@@ -375,13 +423,16 @@ h3 {
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-
         }
+        &__title--modified {
+            padding-top: 20px;}
     }
 
     .copyright {
         padding-left: 0;
-        padding-bottom: 80px;
+        padding-bottom: 50px;
+        font-size: 14px;
+        padding-top: 18px;
     }
 
     .copyright--mobile {
