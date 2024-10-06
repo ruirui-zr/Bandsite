@@ -185,6 +185,15 @@ h3 {
 .photo {
     width: 100%;
     padding-bottom: 1.625rem;
+
+    &-filter{
+        filter: grayscale(100%);
+
+        &:hover{
+            filter: none;
+        }
+    }
+
 }
 
 .footer {
@@ -236,6 +245,10 @@ h3 {
     }
 }
 
+.mailto{
+    @extend .contact__detail;
+    @include link;
+}
 
 .copyright {
     padding-bottom: 3.375rem;
@@ -461,6 +474,10 @@ h3 {
         &__title--modified {
             padding-top: 1.25rem;
         }
+    }
+
+    .mailto{
+        padding-top: 1.8125rem;
     }
 
     .copyright {

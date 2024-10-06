@@ -181,6 +181,12 @@ h3 {
   width: 100%;
   padding-bottom: 1.625rem;
 }
+.photo-filter {
+  filter: grayscale(100%);
+}
+.photo-filter:hover {
+  filter: none;
+}
 
 .footer {
   padding-left: 1.75rem;
@@ -218,8 +224,16 @@ h3 {
 .contact__title--modified {
   padding-top: 2rem;
 }
-.contact__detail {
+.contact__detail, .mailto {
   padding-top: 0.9375rem;
+}
+
+.mailto {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.mailto:visited {
+  color: #FFFFFF;
 }
 
 .copyright {
@@ -409,6 +423,9 @@ h3 {
   }
   .contact__title--modified {
     padding-top: 1.25rem;
+  }
+  .mailto {
+    padding-top: 1.8125rem;
   }
   .copyright {
     padding-left: 0;
