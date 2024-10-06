@@ -27,13 +27,13 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 2.5rem;
+  padding-top: 40px;
 }
 .header__logo {
   color: #FFFFFF;
   text-decoration: none;
-  font-size: 2.8125rem;
-  line-height: 1.375rem;
+  font-size: 45px;
+  line-height: 22px;
   font-weight: 100;
 }
 .header__logo:visited {
@@ -46,33 +46,33 @@ h3 {
   align-items: center;
   width: 100%;
   color: #FFFFFF;
-  padding-top: 1rem;
+  padding-top: 16px;
 }
 .header__nav-title {
   color: #E1E1E1;
   color: #FFFFFF;
   text-decoration: none;
-  font-size: 1.625rem;
+  font-size: 26px;
   display: flex;
   justify-content: center;
   font-weight: 100;
-  padding-bottom: 2.75rem;
+  padding-bottom: 28px;
 }
 .header__nav-title:visited {
   color: #FFFFFF;
 }
 .header__nav-title--bio {
-  padding-right: 6.25rem;
+  padding-right: 100px;
 }
 .header__nav-title--shows {
-  padding-right: 0.625rem;
+  padding-right: 10px;
 }
 .header__image {
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/Images/hero-bio.jpg");
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 23.125rem;
+  height: 370px;
   position: relative;
 }
 .header__image-title {
@@ -81,7 +81,7 @@ h3 {
   position: absolute;
   top: 40%;
   color: #FFFFFF;
-  font-size: 3rem;
+  font-size: 48px;
   font-weight: 510;
 }
 
@@ -93,57 +93,51 @@ h3 {
   font-size: 24px;
   line-height: 32px;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 48px;
   font-weight: 600;
-  padding-top: 3rem;
-  padding-bottom: 2.25rem;
+  padding-top: 48px;
+  padding-bottom: 36px;
 }
 .main__subtitle--margin {
-  padding-bottom: 1rem;
+  padding-bottom: 16px;
 }
 
-.musician__image-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 20rem;
-}
 .musician__image {
   box-sizing: border-box;
   display: block;
   width: 100%;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 .musician__quote {
   font-weight: 600;
-  font-size: 1.75rem;
+  font-size: 28px;
   line-height: 1.5;
   margin: 0;
   color: #323232;
 }
 .musician__quote--name {
-  padding-top: 0.625rem;
+  padding-top: 10px;
 }
 
 .paragraph__subheader {
-  font-size: 1.625rem;
-  line-height: 1.375rem;
-  padding-top: 2rem;
+  font-size: 26px;
+  line-height: 22px;
+  padding-top: 32px;
 }
 .paragraph__text {
-  font-size: 1.5625rem;
+  font-size: 25px;
   line-height: 1.45;
   font-weight: 400;
-  padding-top: 0.5rem;
+  padding-top: 8px;
 }
 .paragraph__text--modified {
-  padding-top: 2.1875rem;
+  padding-top: 35px;
 }
 
 .gallery__background {
   background-color: #FAFAFA;
-  margin-top: 1.875rem;
+  margin-top: 30px;
 }
 
 .photogallery {
@@ -154,20 +148,20 @@ h3 {
 
 .photo {
   width: 100%;
-  padding-bottom: 1.625rem;
+  padding-bottom: 26px;
 }
 
 .footer {
-  padding-left: 1.75rem;
+  padding-left: 28px;
   color: #FFFFFF;
-  font-size: 1.5rem;
+  font-size: 24px;
 }
 .footer__subtitle {
-  line-height: 2rem;
-  font-size: 3rem;
+  line-height: 32px;
+  font-size: 48px;
   font-weight: 600;
-  padding-top: 3.5rem;
-  padding-bottom: 2.25rem;
+  padding-top: 56px;
+  padding-bottom: 36px;
 }
 
 .footer__background {
@@ -175,31 +169,31 @@ h3 {
 }
 
 .apps {
-  padding-top: 1rem;
+  padding-top: 16px;
   display: flex;
   justify-content: flex-start;
-  gap: 3.25rem;
+  gap: 52px;
 }
 
 .social-media__logo {
-  width: 2.8125rem;
-  height: 2.8125rem;
+  width: 45px;
+  height: 45px;
 }
 
 .contact__title {
-  padding-top: 1.25rem;
+  padding-top: 20px;
   font-weight: 600;
 }
 .contact__title--modified {
-  padding-top: 2rem;
+  padding-top: 32px;
 }
 .contact__detail {
-  padding-top: 0.9375rem;
+  padding-top: 15px;
 }
 
 .copyright {
-  padding-bottom: 3.375rem;
-  font-size: 1.375rem;
+  padding-bottom: 54px;
+  font-size: 22px;
 }
 
 .copyright--tablet {
@@ -208,7 +202,7 @@ h3 {
 
 .copyright--mobile {
   display: content;
-  padding-top: 3.125rem;
+  padding-top: 50px;
   font-weight: 100;
 }
 
@@ -218,15 +212,15 @@ h3 {
     flex-direction: row;
     padding-left: 36px;
     padding-right: 36px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
   .header__logo {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
   .header__nav {
     justify-content: flex-start;
-    padding: 0 1.25rem;
+    padding: 0 20px;
     align-items: center;
   }
   .header__nav-title {
@@ -235,16 +229,16 @@ h3 {
     line-height: 22px;
     font-weight: 400;
     padding: 0px 0px;
-    padding-left: 3.125rem;
+    padding-left: 50px;
   }
   .header__image {
-    height: 28.125rem;
+    height: 450px;
   }
   .header__image-title {
     padding-left: 36px;
     padding-right: 36px;
-    font-size: 3.75rem;
-    line-height: 4.25rem;
+    font-size: 60px;
+    line-height: 68px;
   }
   .main__content {
     padding-left: 36px;
@@ -252,38 +246,39 @@ h3 {
   }
   .main__subtitle {
     padding-left: 0;
-    padding-top: 3rem;
-    padding-bottom: 1.5rem;
+    padding-top: 48px;
+    padding-bottom: 24px;
     font-size: 36px;
     line-height: 44px;
-    font-weight: 700;
+    color: #323232;
   }
   .musician__quote {
-    font-size: 1.375rem;
+    font-size: 22px;
     line-height: 1.3;
-    padding-top: 1.75rem;
+    padding-top: 28px;
   }
   .musician__quote--name {
-    padding-top: 0.625rem;
+    padding-top: 10px;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 16px;
   }
   .musician__image-container {
-    height: 19.375rem;
+    height: 310px;
   }
   .musician__image {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 48px;
+    padding-right: 48px;
+    transform: translateY(-14%);
   }
   .musician__text {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 48px;
+    padding-right: 48px;
   }
   .paragraph__sections {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 1.25rem;
+    gap: 20px;
   }
   .paragraph__text {
     padding-top: 0px;
@@ -297,36 +292,37 @@ h3 {
     justify-content: space-between;
     padding-left: 0px;
     padding-right: 0px;
-    padding-bottom: 1rem;
+    padding-bottom: 16px;
   }
   .photo {
     width: 30%;
-    padding-bottom: 1.375rem;
+    padding-bottom: 22px;
+    height: 124px;
   }
   .footer {
     padding-left: 36px;
     padding-right: 36px;
   }
   .footer__subtitle {
-    font-size: 2.25rem;
-    line-height: 2.75rem;
-    padding-top: 2.625rem;
+    font-size: 36px;
+    line-height: 44px;
+    padding-top: 42px;
     padding-bottom: 0;
   }
   .social-media {
     display: flex;
     align-items: center;
-    gap: 1.875rem;
+    gap: 30px;
   }
   .social-media__logo {
-    width: 1.5625rem;
-    height: 1.5625rem;
+    width: 25px;
+    height: 25px;
   }
   .apps {
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
-    padding-top: 3.125rem;
+    gap: 24px;
+    padding-top: 50px;
   }
   .footer {
     font-size: 14px;
@@ -337,8 +333,8 @@ h3 {
     display: block;
     margin-left: auto;
     font-weight: 100;
-    font-size: 1.5rem;
-    padding-top: 2.5rem;
+    font-size: 24px;
+    padding-top: 40px;
   }
   .contact__info {
     display: flex;
@@ -347,13 +343,13 @@ h3 {
     align-items: center;
   }
   .contact__title--modified {
-    padding-top: 1.25rem;
+    padding-top: 20px;
   }
   .copyright {
     padding-left: 0;
-    padding-bottom: 3.125rem;
-    font-size: 0.875rem;
-    padding-top: 1.125rem;
+    padding-bottom: 50px;
+    font-size: 14px;
+    padding-top: 18px;
   }
   .copyright--mobile {
     display: none;
@@ -361,23 +357,62 @@ h3 {
 }
 @media (min-width: 1280px) {
   .header {
-    padding-left: 160px;
-    padding-right: 160px;
+    padding-left: 130px;
+    padding-right: 130px;
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }
+  .header__image {
+    height: 85vh;
   }
   .header__image-title {
-    padding-left: 160px;
-    padding-right: 160px;
+    padding-left: 130px;
+    padding-top: 20px;
+  }
+  .header__nav--title {
+    padding-left: 36px;
   }
   .main__content {
-    padding-left: 160px;
-    padding-right: 160px;
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+  .main__subtitle {
+    padding-bottom: 36px;
+  }
+  .musician__image-container {
+    height: 55%;
   }
   .musician__image {
-    padding-left: 160px;
-    padding-right: 160px;
+    padding-left: 90px;
+    padding-right: 90px;
+    -webkit-clip-path: inset(10% 0 10% 0);
+            clip-path: inset(10% 0 10% 0);
+  }
+  .musician__quote {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .musician__quote--name {
+    padding-top: 18px;
+  }
+  .paragraph__subheader {
+    padding-left: 40px;
+  }
+  .paragraph__sections {
+    padding-left: 40px;
+  }
+  .photo {
+    height: 180px;
   }
   .footer {
-    padding-left: 160px;
-    padding-right: 160px;
+    padding-left: 130px;
+    padding-right: 130px;
   }
-}/*# sourceMappingURL=bio.css.map */
+  .contact__detail {
+    padding-top: 10px;
+  }
+  .contact__info {
+    justify-content: flex-start;
+    gap: 70px;
+  }
+}/*# sourceMappingURL=bio copy.css.map */

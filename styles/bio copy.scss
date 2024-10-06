@@ -16,12 +16,13 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 2.5rem;
+    padding-top: 40px;
 
     &__logo {
         @include link;
-        font-size: 2.8125rem;
-        line-height: 1.375rem;
+        // @include subheader;
+        font-size: 45px;
+        line-height: 22px;
         font-weight: 100;
     }
 
@@ -32,23 +33,26 @@ h3 {
         align-items: center;
         width: 100%;
         color: $White;
-        padding-top: 1rem;
+        padding-top: 16px;
 
         &-title {
+            // display: inline-block;
+            // /* 确保文本宽度与内容一致 */
             color: $Mercury;
+            // @include body-copy;
             @include link;
-            font-size: 1.625rem; 
+            font-size: 26px;
             display: flex;
             justify-content: center;
             font-weight: 100;
-            padding-bottom: 2.75rem;
+            padding-bottom: 28px;
 
             &--bio {
-                padding-right: 6.25rem;
+                padding-right: 100px;
             }
 
             &--shows {
-                padding-right: 0.625rem;
+                padding-right: 10px;
             }
 
         }
@@ -61,16 +65,17 @@ h3 {
         background-position: center;
         background-size: cover;
         width: 100%;
-        height: 23.125rem;
+        height: 370px;
         position: relative;
 
 
         &-title {
             @include padding-left-right;
+            // @include page-header;
             position: absolute;
             top: 40%;
             color: $White;
-            font-size: 3rem;
+            font-size: 48px;
             font-weight: 510;
         }
     }
@@ -84,62 +89,73 @@ h3 {
 
     &__subtitle {
         @include section-header;
-        font-size: 3rem;
+        // @include subheader;
+        font-size: 48px;
         font-weight: 600;
-        padding-top: 3rem;
-        padding-bottom: 2.25rem;
+        padding-top: 48px;
+        padding-bottom: 36px;
+        // @include padding-left-right;
 
         &--margin {
-            padding-bottom: 1rem;
+            padding-bottom: 16px;
         }
 
     }
 }
 
 .musician {
-    &__image-container{
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        height: 20rem;
-    }
+    // &__image-container{
+    //     position: relative;
+    //     overflow: hidden;
+    //     width: 100%;
+    //     height: 320px;
+    // }
     
     &__image {
         box-sizing: border-box; 
         display: block;
         width: 100%;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        // transform: translateY(-23%);
     }
 
+    // &__text {
+    //     @include tablet-musicians;
+    // }
+
     &__quote {
+        // @include body-copy;
         font-weight: 600;
-        font-size: 1.75rem;
+        font-size: 28px;
         line-height: 1.5;
         margin: 0;
         color: $BandSite-Black;
 
         &--name{
-            padding-top: 0.625rem;
+            padding-top: 10px;
         }
     }
 }
 
 .paragraph {
     &__subheader {
-        font-size: 1.625rem;
-        line-height: 1.375rem;
-        padding-top: 2rem;
+        // @include subheader;
+        font-size: 26px;
+        line-height: 22px;
+        padding-top: 32px;
     }
 
+    // &__sections
     &__text {
-        font-size: 1.5625rem;
+        // @include body-copy;
+        font-size: 25px;
         line-height: 1.45;
         font-weight: 400;
-        padding-top: 0.5rem;
+        padding-top: 8px;
 
         &--modified{
-            padding-top: 2.1875rem;
+            padding-top: 35px;
         }
     }
 }
@@ -147,29 +163,32 @@ h3 {
 
 .gallery__background {
     background-color: $Alabaster;
-    margin-top: 1.875rem;
+    margin-top: 30px;
 }
 
 .photogallery {
     @include images;
+    // padding-bottom: 16px;
+    // @include padding-left-right;
 }
 
 .photo {
     width: 100%;
-    padding-bottom: 1.625rem;
+    padding-bottom: 26px;
 }
 
 .footer {
-    padding-left: 1.75rem;
+    // @include footer-copy;
+    padding-left: 28px;
     color: $White;
-    font-size: 1.5rem;
+    font-size: 24px;
 
     &__subtitle{
-        line-height: 2rem;
-        font-size: 3rem;
+        line-height: 32px;
+        font-size: 48px;
         font-weight: 600;
-        padding-top:3.5rem;
-        padding-bottom: 2.25rem;
+        padding-top: 56px;
+        padding-bottom: 36px;
     }
 }
 
@@ -178,10 +197,11 @@ h3 {
 }
 
 .apps {
-    padding-top: 1rem;
+    // @include padding-left-right;
+    padding-top: 16px;
     display: flex;
     justify-content: flex-start;
-    gap: 3.25rem;
+    gap: 52px;
 
     // &__logo{
 
@@ -189,29 +209,34 @@ h3 {
 }
 
 .social-media__logo{
-    width: 2.8125rem;
-    height: 2.8125rem;
+    width: 45px;
+    height: 45px;
 }
 
 .contact {
+    // &__content {
+    //         @include tablet-padding-left-right;
+    //     }
+
     &__title {
-        padding-top: 1.25rem;
+        padding-top: 20px;
         font-weight: 600;
 
         &--modified{
-            padding-top: 2rem;
+            padding-top: 32px;
         }
         }
 
     &__detail{
-            padding-top: 0.9375rem;
+            padding-top: 15px;
         }
     }
 
 
 .copyright {
-    padding-bottom: 3.375rem;
-    font-size: 1.375rem;
+    // @include padding-left-right;
+    padding-bottom: 54px;
+    font-size: 22px;
 }
 
 .copyright--tablet {
@@ -220,7 +245,7 @@ h3 {
 
 .copyright--mobile {
     display: content;
-    padding-top: 3.125rem;
+    padding-top: 50px;
     font-weight: 100;
 }
 
@@ -235,33 +260,35 @@ h3 {
         text-align: left;
         flex-direction: row;
         @include tablet-padding-left-right;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        padding-top: 16px;
+        padding-bottom: 16px;
 
         &__logo {
-            font-size: 1.5rem;
+            // @include tablet-desktop-subheader;
+            font-size: 24px;
         }
 
         &__nav {
             justify-content: flex-start;
-            padding: 0 1.25rem;
+            padding: 0 20px;
             align-items: center;
 
             &-title {
                 justify-content: flex-start;
                 @include tablet-desktop-body-copy;
                 padding: 0px 0px;
-                padding-left: 3.125rem;
+                padding-left: 50px;
             }
         }
 
         &__image {
-            height: 28.125rem;
+            height: 450px;
 
             &-title {
                 @include tablet-padding-left-right;
-                font-size: 3.75rem;
-                line-height: 4.25rem;
+                // @include tablet-desktop-page-header;
+                font-size: 60px;
+                line-height: 68px;
             }
         }
 
@@ -275,47 +302,57 @@ h3 {
 
         &__subtitle {
             padding-left: 0;
-            padding-top: 3rem;
-            padding-bottom: 1.5rem;
-            @include tablet-desktop-section-header;
+            padding-top: 48px;
+            padding-bottom: 24px;
+            // @include tablet-desktop-section-header;
+            font-size: 36px;
+            line-height: 44px;
+            color: $BandSite-Black;
         }
     }
 
     .musician {
         &__quote {
-            font-size: 1.375rem;
+            // @include tablet-desktop-body-copy;
+            font-size: 22px;
             line-height: 1.3;
-            padding-top: 1.75rem;
+            padding-top: 28px;
 
             &--name{
-                padding-top: 0.625rem;
+                padding-top: 10px;
                 font-weight: 600;
-                font-size: 1rem;
+                font-size: 16px;
             }
         }
 
         &__image-container{
-            height: 19.375rem;
+            height: 310px;
         }
 
         &__image {
-            padding-left:3rem;
-            padding-right: 3rem;
-            // transform: translateY(-14%);
+            // @include tablet-padding-left-right;
+            padding-left: 48px;
+            padding-right: 48px;
+            transform: translateY(-14%);
         }
 
         &__text {
-            padding-left: 3rem;
-            padding-right: 3rem;
+            padding-left: 48px;
+            padding-right: 48px;
         }
     }
 
     .paragraph {
+        // &__subheader {
+        //     // @include tablet-desktop-subheader;
+
+        // }
+
         &__sections {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            gap: 1.25rem;
+            gap: 20px;
         }
 
         &__text {
@@ -331,21 +368,21 @@ h3 {
         justify-content: space-between;
         padding-left: 0px;
         padding-right: 0px;
-        padding-bottom: 1rem;
+        padding-bottom: 16px;
     }
 
     .photo {
         width: 30%;
-        padding-bottom: 1.375rem;
-        // height: 7.75rem;
+        padding-bottom: 22px;
+        height: 124px;
     }
 
     .footer {
         @include tablet-padding-left-right;
         &__subtitle{
-            font-size: 2.25rem;
-            line-height: 2.75rem;
-            padding-top:2.625rem;
+            font-size: 36px;
+            line-height: 44px;
+            padding-top: 42px;
             padding-bottom: 0;
         }
     }
@@ -353,19 +390,19 @@ h3 {
     .social-media{
         display: flex;
         align-items: center; 
-        gap: 1.875rem;
+        gap: 30px;
 
         &__logo{
-            width: 1.5625rem;
-            height: 1.5625rem;
+            width: 25px;
+            height: 25px;
         }
     }
 
     .apps {
         justify-content: center;
         align-items: center;
-        gap: 1.5rem;
-        padding-top: 3.125rem;
+        gap: 24px;
+        padding-top: 50px;
     }
 
     .footer {
@@ -376,8 +413,8 @@ h3 {
         display: block;
         margin-left: auto;
         font-weight: 100;
-        font-size: 1.5rem;
-        padding-top: 2.5rem;
+        font-size: 24px;
+        padding-top: 40px;
     }
 
     .contact {
@@ -388,14 +425,14 @@ h3 {
             align-items: center;
         }
         &__title--modified {
-            padding-top: 1.25rem;}
+            padding-top: 20px;}
     }
 
     .copyright {
         padding-left: 0;
-        padding-bottom: 3.125rem;
-        font-size: 0.875rem;
-        padding-top: 1.125rem;
+        padding-bottom: 50px;
+        font-size: 14px;
+        padding-top: 18px;
     }
 
     .copyright--mobile {
@@ -403,30 +440,97 @@ h3 {
     }
 }
 
+// desktop
+// desktop
+// desktop
+// desktop
+// desktop
+
 @media (min-width: $desktop-break-point) {
     .header {
-        @include desktop-padding-left-right;
+        padding-left: 130px;
+        padding-right: 130px;
+        padding-top: 23px;
+        padding-bottom: 23px;
 
         &__image {
+            height: 85vh;
+
             &-title {
-                @include desktop-padding-left-right;
+                // @include desktop-padding-left-right;
+                padding-left: 130px;
+                padding-top: 20px;
             }
         }
+
+        &__nav--title{
+            padding-left: 36px;
+        }
+
     }
 
     .main {
         &__content {
-            @include desktop-padding-left-right;
+            // @include desktop-padding-left-right;
+            padding-left: 130px;
+            padding-right: 130px;
+        }
+
+        &__subtitle{
+            padding-bottom: 36px;
         }
     }
 
     .musician {
+        &__image-container{
+            height: 55%;
+        }
+
         &__image {
-            @include desktop-padding-left-right;
+            // @include desktop-padding-left-right;
+            padding-left: 90px;
+            padding-right: 90px;
+            clip-path: inset(10% 0 10% 0);
+        }
+
+        &__quote{
+            padding-left: 40px;
+            padding-right: 40px;
+
+            &--name{
+                padding-top: 18px;
+            }
         }
     }
 
-    .footer {
-        @include desktop-padding-left-right;
+    .paragraph{
+        &__subheader{
+            padding-left: 40px;
+        }
+        &__sections{
+            padding-left: 40px;
+        }
     }
+
+    .photo{
+        height: 180px;
+    }
+
+    .footer {
+        // @include desktop-padding-left-right;
+        padding-left: 130px;
+        padding-right: 130px;
+    }
+
+    .contact{
+        &__detail{
+            padding-top: 10px;
+        }
+
+        &__info{
+            justify-content: flex-start;
+            gap: 70px;
+        }
+    }
+
 }

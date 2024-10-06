@@ -19,38 +19,11 @@
 
 
 // mobile font size 
-@mixin page-header{
-    font-size: 24px;
-    line-height: 32px;
-    font-weight: 700;
-    @content;
-}
 
 @mixin section-header{
     font-size: 24px;
     line-height: 32px;
     font-weight: 700;
-    @content;
-}
-
-// @mixin subheader{
-//     font-size: 14px;
-//     line-height: 22px;
-//     font-weight: 600;
-//     @content;
-// }
-
-// @mixin body-copy{
-//     font-size: 13px;
-//     line-height: 18px;
-//     font-weight: 400;
-//     @content;
-// }
-
-@mixin footer-copy{
-    font-size: 13px;
-    line-height: 18px;
-    font-weight: 400;
     @content;
 }
 
@@ -63,24 +36,11 @@
 
 
 // desktop & tablet font size 
-@mixin tablet-desktop-page-header{
-    font-size: 60px;
-    line-height: 68px;
-    font-weight: 700;
-    @content;
-}
 
 @mixin tablet-desktop-section-header{
-    font-size: 36px;
-    line-height: 44px;
-    font-weight: 700;
-    @content;
-}
-
-@mixin tablet-desktop-subheader{
-    font-size: 24px;
-    line-height: 32px;
-    font-weight: 600;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    color: $BandSite-Black;
     @content;
 }
 
