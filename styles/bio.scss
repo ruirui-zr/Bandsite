@@ -26,6 +26,7 @@ h3 {
     }
 
     &__nav {
+        position: relative;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -35,25 +36,50 @@ h3 {
         padding-top: 1rem;
 
         &-title {
+            // position: relative;
             color: $Mercury;
             @include link;
             font-size: 1.625rem; 
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             font-weight: 100;
             padding-bottom: 2.75rem;
 
-            &--bio {
-                padding-right: 6.25rem;
+            &:hover{
+                font-weight: 600;
             }
-
-            &--shows {
-                padding-right: 0.625rem;
-            }
-
         }
-    }
 
+        &--bio::after{
+                position: absolute;
+                content: "";
+                width: 50vw;
+                height: 12px;
+                background-color: white;
+                bottom: -5px;
+                left: 0;
+                transform:scaleX(0);
+            }
+        &--bio:hover::after{
+                width: 50vw;
+                transform: scaleX(1);
+            }
+
+        &--shows::after{
+                position: absolute;
+                content: "";
+                width: 50vw;
+                height: 12px;
+                background-color: white;
+                bottom: -5px;
+                right: 0;
+                transform:scaleX(0);
+            }
+        &--shows:hover::after{
+                transform: scaleX(1);
+            }
+        }
+    
 
     &__image {
         background: linear-gradient(rgba($BandSite-Black, 0.5), rgba($BandSite-Black, 0.5)),

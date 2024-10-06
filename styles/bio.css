@@ -40,6 +40,7 @@ h3 {
   color: #FFFFFF;
 }
 .header__nav {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -54,18 +55,42 @@ h3 {
   text-decoration: none;
   font-size: 1.625rem;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   font-weight: 100;
   padding-bottom: 2.75rem;
 }
 .header__nav-title:visited {
   color: #FFFFFF;
 }
-.header__nav-title--bio {
-  padding-right: 6.25rem;
+.header__nav-title:hover {
+  font-weight: 600;
 }
-.header__nav-title--shows {
-  padding-right: 0.625rem;
+.header__nav--bio::after {
+  position: absolute;
+  content: "";
+  width: 50vw;
+  height: 12px;
+  background-color: white;
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+}
+.header__nav--bio:hover::after {
+  width: 50vw;
+  transform: scaleX(1);
+}
+.header__nav--shows::after {
+  position: absolute;
+  content: "";
+  width: 50vw;
+  height: 12px;
+  background-color: white;
+  bottom: -5px;
+  right: 0;
+  transform: scaleX(0);
+}
+.header__nav--shows:hover::after {
+  transform: scaleX(1);
 }
 .header__image {
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/Images/hero-bio.jpg");
@@ -254,9 +279,9 @@ h3 {
     padding-left: 0;
     padding-top: 3rem;
     padding-bottom: 1.5rem;
-    font-size: 36px;
-    line-height: 44px;
-    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    color: #323232;
   }
   .musician__quote {
     font-size: 1.375rem;
