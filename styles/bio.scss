@@ -44,10 +44,7 @@ h3 {
             justify-content: flex-start;
             font-weight: 100;
             padding-bottom: 2.75rem;
-
-            &:hover {
-                font-weight: 600;
-            }
+            font-weight: 600;
         }
 
         &--bio::after {
@@ -58,27 +55,19 @@ h3 {
             background-color: white;
             bottom: -5px;
             left: 0;
-            transform: scaleX(0);
-        }
-
-        &--bio:hover::after {
             transform: scaleX(1);
         }
 
-        &--shows::after {
-            position: absolute;
-            content: "";
-            width: 49vw;
-            height: 12px;
-            background-color: white;
-            bottom: -5px;
-            right: 0;
-            transform: scaleX(0);
-        }
-
-        &--shows:hover::after {
-            transform: scaleX(1);
-        }
+        // &--shows::after {
+        //     position: absolute;
+        //     content: "";
+        //     width: 49vw;
+        //     height: 12px;
+        //     background-color: white;
+        //     bottom: -5px;
+        //     right: 0;
+        //     transform: scaleX(1);
+        // }
     }
 
 
