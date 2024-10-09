@@ -1,6 +1,6 @@
 @use 'partials/mixins' as *;
 @use 'partials/variables' as *;
-@use 'partials/font' as *;
+@use 'partials/fonts' as *;
 
 html,
 body,
@@ -37,17 +37,20 @@ h3 {
 
         &-title {
             // position: relative;
-            color: $Mercury;
             @include link;
+            color: $Mercury;
             font-size: 1.625rem;
             display: flex;
             justify-content: flex-start;
             font-weight: 100;
-            padding-bottom: 2.75rem;
+            padding-bottom: 2.2rem;
             font-weight: 600;
+
         }
 
-        &--bio::after {
+        &--bio {
+            color: $White;
+        &::after {
             position: absolute;
             content: "";
             width: 49vw;
@@ -57,6 +60,7 @@ h3 {
             left: 0;
             transform: scaleX(1);
         }
+    }
 
         // &--shows::after {
         //     position: absolute;
@@ -175,10 +179,10 @@ h3 {
     width: 100%;
     padding-bottom: 1.625rem;
 
-    &-filter{
+    &-filter {
         filter: grayscale(100%);
 
-        &:hover{
+        &:hover {
             filter: none;
         }
     }
@@ -220,6 +224,12 @@ h3 {
 }
 
 .contact {
+    &__content {
+        max-width: 100%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
     &__title {
         padding-top: 1.25rem;
         font-weight: 600;
@@ -232,9 +242,10 @@ h3 {
     &__detail {
         padding-top: 0.9375rem;
     }
+
 }
 
-.mailto{
+.mailto {
     @extend .contact__detail;
     @include link;
 }
@@ -252,6 +263,11 @@ h3 {
     display: content;
     padding-top: 3.125rem;
     font-weight: 100;
+    @include link;
+}
+
+p.copyright{
+    margin-bottom: 0;
 }
 
 
@@ -283,11 +299,14 @@ h3 {
                 padding: 0px 0px;
                 padding-left: 3.125rem;
                 display: inline-block;
+                font-weight: 100;
+                color: $Mercury;
             }
 
             &--bio {
-                position: relative; // 确保伪元素相对于父元素定位
-                display: inline-block; // 使父元素宽度适应内容
+                position: relative;
+                display: inline-block;
+                font-weight: 100;
 
                 &::after {
                     position: absolute;
@@ -303,11 +322,24 @@ h3 {
                 &:hover::after {
                     transform: scaleX(1);
                 }
+
+                &:hover{
+                    color: $White;
+                }
+                
+                &:active {
+                    font-weight: 600;
+                    color: $White;
+
+                    &::after {
+                        transform: scaleX(1);
+                    }
+                }
             }
 
             &--shows {
-                position: relative; // 确保伪元素相对于父元素定位
-                display: inline-block; // 使父元素宽度适应内容
+                position: relative; 
+                display: inline-block; 
 
                 &::after {
                     position: absolute;
@@ -322,6 +354,19 @@ h3 {
 
                 &:hover::after {
                     transform: scaleX(1);
+                }
+
+                &:hover{
+                    color: $White;
+                }
+                
+                &:active {
+                    font-weight: 600;
+                    color: $White;
+
+                    &::after {
+                        transform: scaleX(1);
+                    }
                 }
             }
         }
@@ -450,6 +495,7 @@ h3 {
         font-weight: 100;
         font-size: 1.5rem;
         padding-top: 2.5rem;
+        @include link;
     }
 
     .contact {
@@ -465,7 +511,7 @@ h3 {
         }
     }
 
-    .mailto{
+    .mailto {
         padding-top: 1.8125rem;
     }
 
@@ -487,8 +533,17 @@ h3 {
         padding-top: 30px;
         padding-bottom: 30px;
 
+        &__nav{
+            &--bio::after{
+                bottom: -38px;
+            }
+            &--shows::after{
+                bottom: -38px;
+            }
+        }
+
         &__image {
-            height: 80vh;
+            height: 87vh;
             &-title {
                 @include desktop-padding-left-right;
             }
@@ -497,19 +552,24 @@ h3 {
 
     .main {
         &__content {
-            @include desktop-padding-left-right;
+            padding-left: 140px;
+            padding-right: 140px;
         }
     }
 
     .musician {
         &__image {
-            @include desktop-padding-left-right;
+            padding-left: 90px;
+            padding-right: 90px;
             height: 60vh;
         }
-        &__text{
-            @include desktop-padding-left-right;
+
+        &__text {
+            padding-left: 90px;
+            padding-right: 90px;
         }
-        &__quote{
+
+        &__quote {
             padding-right: 20%;
         }
     }
@@ -524,7 +584,7 @@ h3 {
         @include desktop-padding-left-right;
     }
 
-    .contact__info{
+    .contact__info {
         justify-content: flex-start;
         gap: 140px;
     }

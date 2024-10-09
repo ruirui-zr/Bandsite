@@ -1,16 +1,16 @@
 @font-face {
   font-family: "AvenirNextLTPro";
-  src: url(/assets/Font/AvenirNextLTPro-Regular.otf);
+  src: url(/assets/fonts/AvenirNextLTPro-Regular.otf);
   font-weight: normal;
 }
 @font-face {
   font-family: "AvenirNextLTPro";
-  src: url(/assets/Font/AvenirNextLTPro-Demi.otf);
+  src: url(/assets/fonts/AvenirNextLTPro-Demi.otf);
   font-weight: 600;
 }
 @font-face {
   font-family: "AvenirNextLTPro";
-  src: url(/assets/Font/AvenirNextLTPro-Bold.otf);
+  src: url(/assets/fonts/AvenirNextLTPro-Bold.otf);
   font-weight: bold;
 }
 html,
@@ -36,9 +36,6 @@ h3 {
   line-height: 1.375rem;
   font-weight: 100;
 }
-.header__logo:visited {
-  color: #FFFFFF;
-}
 .header__nav {
   position: relative;
   display: flex;
@@ -50,17 +47,17 @@ h3 {
   padding-top: 1rem;
 }
 .header__nav-title {
-  color: #E1E1E1;
   color: #FFFFFF;
   text-decoration: none;
+  color: #E1E1E1;
   font-size: 1.625rem;
   display: flex;
   justify-content: flex-start;
   font-weight: 100;
-  padding-bottom: 2.75rem;
+  padding-bottom: 2.2rem;
   font-weight: 600;
 }
-.header__nav-title:visited {
+.header__nav--bio {
   color: #FFFFFF;
 }
 .header__nav--bio::after {
@@ -199,6 +196,11 @@ h3 {
   height: 2.8125rem;
 }
 
+.contact__content {
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
 .contact__title {
   padding-top: 1.25rem;
   font-weight: 600;
@@ -214,9 +216,6 @@ h3 {
   color: #FFFFFF;
   text-decoration: none;
 }
-.mailto:visited {
-  color: #FFFFFF;
-}
 
 .copyright {
   padding-bottom: 3.375rem;
@@ -231,6 +230,12 @@ h3 {
   display: content;
   padding-top: 3.125rem;
   font-weight: 100;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+p.copyright {
+  margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
@@ -258,10 +263,13 @@ h3 {
     padding: 0px 0px;
     padding-left: 3.125rem;
     display: inline-block;
+    font-weight: 100;
+    color: #E1E1E1;
   }
   .header__nav--bio {
     position: relative;
     display: inline-block;
+    font-weight: 100;
   }
   .header__nav--bio::after {
     position: absolute;
@@ -274,6 +282,16 @@ h3 {
     transform: scaleX(0);
   }
   .header__nav--bio:hover::after {
+    transform: scaleX(1);
+  }
+  .header__nav--bio:hover {
+    color: #FFFFFF;
+  }
+  .header__nav--bio:active {
+    font-weight: 600;
+    color: #FFFFFF;
+  }
+  .header__nav--bio:active::after {
     transform: scaleX(1);
   }
   .header__nav--shows {
@@ -291,6 +309,16 @@ h3 {
     transform: scaleX(0);
   }
   .header__nav--shows:hover::after {
+    transform: scaleX(1);
+  }
+  .header__nav--shows:hover {
+    color: #FFFFFF;
+  }
+  .header__nav--shows:active {
+    font-weight: 600;
+    color: #FFFFFF;
+  }
+  .header__nav--shows:active::after {
     transform: scaleX(1);
   }
   .header__image {
@@ -396,6 +424,8 @@ h3 {
     font-weight: 100;
     font-size: 1.5rem;
     padding-top: 2.5rem;
+    color: #FFFFFF;
+    text-decoration: none;
   }
   .contact__info {
     display: flex;
@@ -426,25 +456,31 @@ h3 {
     padding-top: 30px;
     padding-bottom: 30px;
   }
+  .header__nav--bio::after {
+    bottom: -38px;
+  }
+  .header__nav--shows::after {
+    bottom: -38px;
+  }
   .header__image {
-    height: 80vh;
+    height: 87vh;
   }
   .header__image-title {
     padding-left: 160px;
     padding-right: 160px;
   }
   .main__content {
-    padding-left: 160px;
-    padding-right: 160px;
+    padding-left: 140px;
+    padding-right: 140px;
   }
   .musician__image {
-    padding-left: 160px;
-    padding-right: 160px;
+    padding-left: 90px;
+    padding-right: 90px;
     height: 60vh;
   }
   .musician__text {
-    padding-left: 160px;
-    padding-right: 160px;
+    padding-left: 90px;
+    padding-right: 90px;
   }
   .musician__quote {
     padding-right: 20%;

@@ -32,20 +32,14 @@
     @content;
 }
 
-// a bundle padding for the musician part in tablet screen
-// @mixin tablet-musicians{
-//     padding-left: 48px;
-//     padding-right: 48px;
-// }
-
 
 @mixin link {
     color: $White;
     text-decoration: none;
 
-    &:visited {
-        color: $White;
-    }
+    // &:visited {
+    //     color: $Mercury;
+    // }
 }
 
 @mixin remove-underline{
