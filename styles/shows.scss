@@ -33,6 +33,63 @@ p {
     }
 }
 
+.shows-list {
+    white-space: pre-line;
+}
+
+.shows{
+    &__subtitle {
+        @include padding-left-right;
+        @include section-header;
+        font-size: 3rem;
+        font-weight: 600;
+        padding-top: 5rem;
+        padding-bottom: 2.6rem;
+
+        &--margin {
+            padding-bottom: 1rem;
+        }
+    }
+
+    &-block{
+        @include padding-left-right;
+    }
+
+    &-info{
+        padding-bottom: 10px;
+    }
+
+    &__title{
+        color: $Silver;
+        font-size: 1.2rem;
+        padding-bottom: 12px;
+        font-weight: 600;
+        &--modified{
+            padding-top: 26px;
+        }
+    }
+
+    &__detail{
+        font-size: 1.6rem;
+        padding-bottom: 20px;
+        padding-top: 8px;
+        &--modified{
+            font-weight: 600;
+        }
+    }
+
+}
+
+.ticket-button{
+    @include ticket-button;
+}
+
+.divider{
+    height: 1px;                 /* Stroke width */
+    background-color:$Mercury;   /* Mercury color */
+    margin: 20px 0;   
+}
+
 
 
 // tablet version

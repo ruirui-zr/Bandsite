@@ -61,23 +61,12 @@ h3 {
             transform: scaleX(1);
         }
     }
-
-        // &--shows::after {
-        //     position: absolute;
-        //     content: "";
-        //     width: 49vw;
-        //     height: 12px;
-        //     background-color: white;
-        //     bottom: -5px;
-        //     right: 0;
-        //     transform: scaleX(1);
-        // }
     }
 
 
     &__image {
         background: linear-gradient(rgba($BandSite-Black, 0.5), rgba($BandSite-Black, 0.5)),
-            url("../assets/Images/hero-bio.jpg");
+            url("../assets/images/hero-bio.jpg");
         background-position: center;
         background-size: cover;
         width: 100%;
@@ -104,7 +93,7 @@ h3 {
 
     &__subtitle {
         @include section-header;
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-weight: 600;
         padding-top: 3rem;
         padding-bottom: 2.25rem;
@@ -116,21 +105,20 @@ h3 {
     }
 }
 
+.image__container{
+    aspect-ratio: 16 / 9;
+    display:flex;
+    justify-content: center;
+    width: 100%;
+}
 .musician {
-    &__image-container {
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        height: 20rem;
-    }
-
     &__image {
-        box-sizing: border-box;
-        display: block;
         width: 100%;
         padding-top: 1rem;
         padding-bottom: 1rem;
-        height: 48vh;
+        object-fit: cover;
+        top:-10px;
+        object-position: bottom;
     }
 
     &__quote {
@@ -186,8 +174,66 @@ h3 {
             filter: none;
         }
     }
-
 }
+
+// conversion
+// conversion
+// conversion
+// conversion
+.form{
+    padding-left: 28px;
+    padding-right: 28px;
+
+    &__title{
+        padding-top: 20px;
+    }
+
+    &__content{
+        display: flex;
+        padding-top: 20px;
+    }
+
+    &__avatar{
+        margin-top: 10px;
+        width: 60px;         
+        height: 60px;
+        background-color: $Mercury;  
+        border-radius: 50%;   
+        display: inline-block; 
+    }
+
+    &__comment{
+        display: flex;
+        flex-direction: column;
+        padding-left: 26px;
+        width:100%;
+    }
+
+    &__label{
+        color: $Silver;
+        font-weight: 600;
+
+        &--modified{
+            margin-top: 20px; 
+        }
+    }
+
+    &__input {
+        margin-top: 10px; 
+        width: calc(100% - 2rem);
+        padding: 10px 20px;
+    }
+    
+    &__input::placeholder{
+        color: $BandSite-Black;
+    }
+
+    &__comment-button{
+        @include ticket-button;
+    }
+}
+
+
 
 .footer {
     padding-left: 1.75rem;
@@ -269,6 +315,7 @@ h3 {
 p.copyright{
     margin-bottom: 0;
 }
+
 
 
 // tablet version
@@ -397,7 +444,22 @@ p.copyright{
         }
     }
 
+    .image__container{
+        aspect-ratio: 16 / 8;
+        display:flex;
+        justify-content: center;
+        width: 100%;
+    }
+
     .musician {
+        &__image {
+            padding-left: 3rem;
+            padding-right: 3rem;
+            // height: 50vh;
+            width: 100%;
+            object-position: center;
+
+        }
         &__quote {
             font-size: 1.375rem;
             line-height: 1.3;
@@ -412,12 +474,6 @@ p.copyright{
 
         &__image-container {
             height: 19.375rem;
-        }
-
-        &__image {
-            padding-left: 3rem;
-            padding-right: 3rem;
-            height: 50vh;
         }
 
         &__text {
@@ -557,11 +613,19 @@ p.copyright{
         }
     }
 
+    .image__container{
+        aspect-ratio: 2 / 1;
+        display:flex;
+        justify-content: center;
+        // width: 85%;
+    }
     .musician {
         &__image {
             padding-left: 90px;
             padding-right: 90px;
-            height: 60vh;
+            height: 45vh;
+            width: 100%;
+            object-position: center;
         }
 
         &__text {

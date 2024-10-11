@@ -39,4 +39,64 @@ p {
   color: #FFFFFF;
   font-size: 1.625rem;
   font-weight: 100;
+}
+
+.shows-list {
+  white-space: pre-line;
+}
+
+.shows__subtitle {
+  padding-left: 28px;
+  padding-right: 28px;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  font-size: 3rem;
+  font-weight: 600;
+  padding-top: 5rem;
+  padding-bottom: 2.6rem;
+}
+.shows__subtitle--margin {
+  padding-bottom: 1rem;
+}
+.shows-block {
+  padding-left: 28px;
+  padding-right: 28px;
+}
+.shows-info {
+  padding-bottom: 10px;
+}
+.shows__title {
+  color: #AFAFAF;
+  font-size: 1.2rem;
+  padding-bottom: 12px;
+  font-weight: 600;
+}
+.shows__title--modified {
+  padding-top: 26px;
+}
+.shows__detail {
+  font-size: 1.6rem;
+  padding-bottom: 20px;
+  padding-top: 8px;
+}
+.shows__detail--modified {
+  font-weight: 600;
+}
+
+.ticket-button {
+  margin: auto;
+  font-size: 1.8rem;
+  color: white;
+  padding: 22px 0px;
+  width: 100%;
+  background-color: #323232;
+  border-radius: 8px;
+  margin: 15px 0px;
+}
+
+.divider {
+  height: 1px; /* Stroke width */
+  background-color: #E1E1E1; /* Mercury color */
+  margin: 20px 0;
 }/*# sourceMappingURL=shows.css.map */

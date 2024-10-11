@@ -1,32 +1,32 @@
 @use 'variables' as *;
 
 // breakpoints for tablet & desktop
-@mixin tablet{
-    @media screen and (min-width: $tablet-break-point){
+@mixin tablet {
+    @media screen and (min-width: $tablet-break-point) {
         @content;
     }
 }
 
-@mixin desktop{
-    @media screen and (mixin-width: $desktop-break-point){
+@mixin desktop {
+    @media screen and (mixin-width: $desktop-break-point) {
         @content;
     }
 }
 
 // padding & margins
-@mixin padding-left-right{
+@mixin padding-left-right {
     padding-left: 28px;
     padding-right: 28px;
     @content;
 }
 
-@mixin tablet-padding-left-right{
+@mixin tablet-padding-left-right {
     padding-left: 36px;
     padding-right: 36px;
     @content;
 }
 
-@mixin desktop-padding-left-right{
+@mixin desktop-padding-left-right {
     padding-left: 160px;
     padding-right: 160px;
     @content;
@@ -42,14 +42,25 @@
     // }
 }
 
-@mixin remove-underline{
+@mixin remove-underline {
     text-decoration: none;
     @content;
 }
 
-@mixin images{
-    max-width: 100%; 
-    height: auto;   
-    display: block; 
+@mixin images {
+    max-width: 100%;
+    height: auto;
+    display: block;
     @content;
+}
+
+@mixin ticket-button {
+    margin: auto;
+    font-size: 1.8rem;
+    color: white;
+    padding: 22px 0px;
+    width: 100%;
+    background-color: $BandSite-Black;
+    border-radius: 8px;
+    margin: 15px 0px;
 }
