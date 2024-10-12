@@ -26,14 +26,7 @@ h3 {
     }
 
     &__nav {
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 100%;
-        color: $White;
-        padding-top: 1rem;
+        @include header-nav-bar;
 
         &-title {
             // position: relative;
@@ -51,14 +44,8 @@ h3 {
         &--bio {
             color: $White;
         &::after {
-            position: absolute;
-            content: "";
-            width: 49vw;
-            height: 12px;
-            background-color: white;
-            bottom: -5px;
+            @include header-underline;
             left: 0;
-            transform: scaleX(1);
         }
     }
     }
@@ -307,11 +294,13 @@ h3 {
 
 .copyright--mobile {
     display: content;
-    padding-top: 3.125rem;
     font-weight: 100;
     @include link;
 }
-
+.footer__title--bottom{
+    padding-top: 4rem;
+    padding-bottom: 0.6rem;
+}
 p.copyright{
     margin-bottom: 0;
 }

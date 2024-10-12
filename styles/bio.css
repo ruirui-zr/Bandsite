@@ -67,8 +67,8 @@ h3 {
   height: 12px;
   background-color: white;
   bottom: -5px;
-  left: 0;
   transform: scaleX(1);
+  left: 0;
 }
 .header__image {
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/images/hero-bio.jpg");
@@ -285,10 +285,14 @@ h3 {
 
 .copyright--mobile {
   display: content;
-  padding-top: 3.125rem;
   font-weight: 100;
   color: #FFFFFF;
   text-decoration: none;
+}
+
+.footer__title--bottom {
+  padding-top: 4rem;
+  padding-bottom: 0.6rem;
 }
 
 p.copyright {

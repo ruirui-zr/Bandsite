@@ -64,3 +64,25 @@
     border-radius: 8px;
     margin: 15px 0px;
 }
+
+@mixin header-nav-bar{
+    position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        color: $White;
+        padding-top: 1rem;
+}
+
+@mixin header-underline{
+    position: absolute;
+            content: "";
+            width: 49vw;
+            height: 12px;
+            background-color: white;
+            bottom: -5px;
+            transform: scaleX(1);
+            @content;
+}

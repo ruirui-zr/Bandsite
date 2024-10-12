@@ -7,65 +7,70 @@
     <link rel="stylesheet" href="../styles/bio.css">
     <link rel="stylesheet" href="../styles/shows.css">
 </head>
+
 <body>
     <header>
         <div class="header">
             <h1><a href="index.html" class="header__logo">BANDSITE</a></h1>
             <div class="header__nav">
-                <h3><a href="index.html" class="header__nav-title header__nav--bio">Biography</a></h3>
+                <h3><a href="index.html" class="header__nav-title header__nav--shows">Biography</a></h3>
                 <h3><a href="" class="header__nav-title header__nav--shows">Shows</a></h3>
             </div>
         </div>
         <div class="header__image">
             <p class="header__image-album">Beautiful Beasts Album</p>
-            <h1 class="header__image-title">Stripes of Yellow x <br/> For The Stings</h1>
-            <!-- insert music clip -->
+            <h1 class="header__image-title">Stripes of Yellow x <br /> For The Stings</h1>
+            <div class="music">
+                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/535872399&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                    <!-- <a href="https://soundcloud.com/momomoyouth" title="MØ" target="_blank" style="color: #cccccc; text-decoration: none;">MØ</a> -->
+            </div>
         </div>
     </header>
 
     <main>
         <ul class="shows-list"></ul>
-        <script src="../scripts/build-shows-page.js"></script>
     </main>
-    
-
-    <footer class="footer footer__background">
-        <section class="social-media">
-            <h1 class="footer__subtitle">Get in Touch</h1>
-            <div class="apps">
-                <a href="https://www.instagram.com">
-                    <img class="social-media__logo" src="/assets/Icons/SVG/Icon-instagram.svg" alt="instagram"></a>
-                <a href="https://www.facebook.com">
-                    <img class="social-media__logo" src="/assets/Icons/SVG/Icon-facebook.svg" alt="facebook"></a>
-                <a href="https://www.yelp.com">
-                    <img class="social-media__logo" src="/assets/Icons/SVG/Icon-twitter.svg" alt="twitter"></a>
-            </div>
-            <h1 class="copyright--tablet">BANDSITE</h1>
-        </section>
-        <div class="contact__info">
-            <section class="contact__content">
-                <p class="contact__title">The Bees Knees Management</p>
-                <p class="contact__detail"> 503 Broadway Penthouse,<br>New York, NY 10012, USA
-                <p><a href="mailto:info@thebeesknees.com" class="mailto">info@thebeesknees.com</a></p>
-            </section>
-
-            <section class="contact__content">
-                <p class="contact__title contact__title--modified">Limitless Artist Group</p>
-                <p class="contact__detail">Booking Agent for<br>US / South America / Japan
-                <p><a href="mailto:bookings@limitlessag.com" class="mailto">bookings@limitlessag.com</a></p>
-                </p>
-            </section>
-
-            <section class="contact__content">
-                <p class="contact__title contact__title--modified">ARCH Entertainment</p>
-                <p class="contact__detail">Booking Agent for<br>UK / EU / AU
-                <p><a href="mailto:bookings@archentertainment.com" class="mailto">bookings@archentertainment.com</a></p>
-                </p>
-            </section>
-
-        </div>
-        <h1 class="copyright--mobile">BANDSITE</h1>
-        <p class="copyright">Copyright The Bees Knees © 2023 All Rights Reserved</p>
-    </footer>
 </body>
+<footer class="footer footer__background">
+    <section class="social-media">
+        <h1 class="footer__subtitle">Get in Touch</h1>
+        <div class="apps">
+            <a href="https://www.instagram.com">
+                <img class="social-media__logo" src="/assets/Icons/SVG/Icon-instagram.svg" alt="instagram"></a>
+            <a href="https://www.facebook.com">
+                <img class="social-media__logo" src="/assets/Icons/SVG/Icon-facebook.svg" alt="facebook"></a>
+            <a href="https://www.yelp.com">
+                <img class="social-media__logo" src="/assets/Icons/SVG/Icon-twitter.svg" alt="twitter"></a>
+        </div>
+        <h1 class="copyright--tablet">BANDSITE</h1>
+    </section>
+    <div class="contact__info">
+        <section class="contact__content">
+            <p class="contact__title">The Bees Knees Management</p>
+            <p class="contact__detail"> 503 Broadway Penthouse,<br>New York, NY 10012, USA
+            <p><a href="mailto:info@thebeesknees.com" class="mailto">info@thebeesknees.com</a></p>
+        </section>
+
+        <section class="contact__content">
+            <p class="contact__title contact__title--modified">Limitless Artist Group</p>
+            <p class="contact__detail">Booking Agent for<br>US / South America / Japan
+            <p><a href="mailto:bookings@limitlessag.com" class="mailto">bookings@limitlessag.com</a></p>
+            </p>
+        </section>
+
+        <section class="contact__content">
+            <p class="contact__title contact__title--modified">ARCH Entertainment</p>
+            <p class="contact__detail">Booking Agent for<br>UK / EU / AU
+            <p><a href="mailto:bookings@archentertainment.com" class="mailto">bookings@archentertainment.com</a></p>
+            </p>
+        </section>
+
+    </div>
+    <div class="footer__title--bottom">
+        <h1><a href="index.html" class="copyright--mobile">BANDSITE</a></h1>
+    </div>
+    <p class="copyright">Copyright The Bees Knees © 2023 All Rights Reserved</p>
+</footer>
+<script src="../scripts/build-shows-page.js"></script>
 </html>

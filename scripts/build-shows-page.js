@@ -32,6 +32,11 @@ const showsListArray = [
 
 
 // Buy Tickets
+const showsHeading = document.createElement("h1");
+showsHeading.classList.add("shows__heading")
+showsHeading.textContent = "Shows";
+const main = document.querySelector("main");
+main.insertBefore(showsHeading, main.firstChild)
 
 const showsList = document.querySelector(".shows-list"); // Assuming showsList is the <ul> or parent container element
 
@@ -75,11 +80,11 @@ for (let i = 0; i < showsListArray.length; i++) {
     locationDiv.classList.add("shows-info");
 
     let locationTitle = document.createElement("p");
-    locationTitle.classList.add("shows__title", "shows__title--modified");
+    locationTitle.classList.add("shows__title");
     locationTitle.textContent = "LOCATION"
 
     let locationInfo = document.createElement("p");
-    locationInfo.classList.add("shows__detail", "shows__detail--modified");
+    locationInfo.classList.add("shows__detail");
     locationInfo.textContent = showsListArray[i].locationInfo;
 
     locationDiv.appendChild(locationTitle);

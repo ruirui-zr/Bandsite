@@ -16,8 +16,7 @@
 html,
 body,
 h1,
-h3,
-p {
+h3 {
   margin: 0;
   padding: 0;
   font-family: "AvenirNextLTPro";
@@ -28,21 +27,77 @@ p {
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 85vh;
+  height: 76vh;
   position: relative;
+}
+.header__image-title {
+  top: 25%;
+  line-height: 1.5;
 }
 .header__image-album {
   padding-left: 28px;
   padding-right: 28px;
-  top: 20%;
+  top: 12%;
   position: absolute;
   color: #FFFFFF;
-  font-size: 1.625rem;
+  font-size: 1.8rem;
   font-weight: 100;
 }
+.header__nav {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  color: #FFFFFF;
+  padding-top: 1rem;
+}
+.header__nav--shows {
+  color: #FFFFFF;
+}
+.header__nav::after {
+  position: absolute;
+  content: "";
+  width: 49vw;
+  height: 12px;
+  background-color: white;
+  bottom: -5px;
+  transform: scaleX(1);
+  right: 0;
+}
 
-.shows-list {
+h1 {
+  padding-left: 56px;
+}
+
+.music {
+  position: absolute;
+  width: 90%;
+  top: 58%;
+  padding-left: 28px;
+}
+
+.audio-player {
+  width: 100%;
+}
+
+.shows__heading {
   white-space: pre-line;
+  padding-left: 28px;
+  padding-top: 70px;
+  padding-bottom: 18px;
+  font-size: 48px;
+  font-weight: 510;
+}
+
+p.shows__title,
+p.shows__detail {
+  margin: 0;
+}
+
+ul {
+  padding-left: 0;
 }
 
 .shows__subtitle {
@@ -99,4 +154,8 @@ p {
   height: 1px; /* Stroke width */
   background-color: #E1E1E1; /* Mercury color */
   margin: 20px 0;
+}
+
+h1 {
+  padding: 0;
 }/*# sourceMappingURL=shows.css.map */
