@@ -63,6 +63,8 @@
     background-color: $BandSite-Black;
     border-radius: 8px;
     margin: 15px 0px;
+    @content;
+
 }
 
 @mixin header-nav-bar{
@@ -74,6 +76,7 @@
         width: 100%;
         color: $White;
         padding-top: 1rem;
+        @content;
 }
 
 @mixin header-underline{
@@ -85,4 +88,15 @@
             bottom: -5px;
             transform: scaleX(1);
             @content;
+}
+
+@mixin avatar{
+    margin-top: 10px;
+    width: 70px;         
+    height: 70px;
+    background-color: $Mercury;  
+    border-radius: 50%;   
+    display: inline-block;
+    flex-shrink: 0;
+    @content;
 }

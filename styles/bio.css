@@ -16,7 +16,8 @@
 html,
 body,
 h1,
-h3 {
+h3,
+ul {
   margin: 0;
   padding: 0;
   font-family: "AvenirNextLTPro";
@@ -70,12 +71,29 @@ h3 {
   transform: scaleX(1);
   left: 0;
 }
+.header__nav--show {
+  font-weight: 100;
+}
+.header__nav--show:hover::after {
+  position: absolute;
+  content: "";
+  width: 49vw;
+  height: 12px;
+  background-color: white;
+  bottom: -5px;
+  transform: scaleX(1);
+  right: 0;
+}
+.header__nav--show:hover {
+  font-weight: 100;
+  color: #FFFFFF;
+}
 .header__image {
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/images/hero-bio.jpg");
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 23.125rem;
+  height: 56vh;
   position: relative;
 }
 .header__image-title {
@@ -96,7 +114,7 @@ h3 {
   font-size: 24px;
   line-height: 32px;
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 600;
   padding-top: 3rem;
   padding-bottom: 2.25rem;
@@ -175,42 +193,73 @@ h3 {
   padding-right: 28px;
 }
 .form__title {
-  padding-top: 20px;
+  padding-top: 45px;
 }
 .form__content {
   display: flex;
-  padding-top: 20px;
+  padding-top: 25px;
 }
 .form__avatar {
   margin-top: 10px;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   background-color: #E1E1E1;
   border-radius: 50%;
   display: inline-block;
+  flex-shrink: 0;
+}
+.form__avatar--modified {
+  margin-top: 10px;
+  width: 70px;
+  height: 70px;
+  background-color: #E1E1E1;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: -7px center;
+     object-position: -7px center;
+  margin-top: 40px;
 }
 .form__comment {
   display: flex;
   flex-direction: column;
-  padding-left: 26px;
+  padding-left: 30px;
   width: 100%;
 }
 .form__label {
   color: #AFAFAF;
   font-weight: 600;
+  font-size: 20px;
 }
 .form__label--modified {
-  margin-top: 20px;
+  margin-top: 50px;
 }
-.form__input {
-  margin-top: 10px;
-  width: calc(100% - 2rem);
+.form__input, .form__input--modified {
+  margin-top: 15px;
+  width: calc(100% - 2.5rem);
   padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px solid #AFAFAF;
+  height: 55px;
+  font-size: 1.5625rem;
+  font-family: "AvenirNextLTPro";
 }
-.form__input::-moz-placeholder {
+.form__input--modified {
+  height: 200px;
+  font-size: 25px;
+}
+.form__input--modified::-moz-placeholder {
+  padding-top: 10px;
+}
+.form__input--modified::placeholder {
+  padding-top: 10px;
+}
+.form__input::-moz-placeholder, .form__input--modified::-moz-placeholder {
   color: #323232;
 }
-.form__input::placeholder {
+.form__input::placeholder, .form__input--modified::placeholder {
   color: #323232;
 }
 .form__comment-button {
@@ -222,6 +271,55 @@ h3 {
   background-color: #323232;
   border-radius: 8px;
   margin: 15px 0px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+.form__comment-button:hover {
+  background-color: #000000;
+}
+
+.comment-user {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  height: 30px;
+  padding-top: 10px;
+}
+.comment-name {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.7;
+}
+.comment-date {
+  font-size: 1.5625rem;
+  color: #AFAFAF;
+  margin: 0;
+}
+.comment-content {
+  font-size: 1.5625rem;
+  line-height: 1.7;
+}
+
+article {
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.form__avatar {
+  margin-top: 10px;
+  width: 70px;
+  height: 70px;
+  background-color: #E1E1E1;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.divider {
+  height: 1px;
+  background-color: #E1E1E1;
+  margin: 20px 0;
 }
 
 .footer {
@@ -239,6 +337,7 @@ h3 {
 
 .footer__background {
   background-color: #323232;
+  margin-top: 2.5rem;
 }
 
 .apps {

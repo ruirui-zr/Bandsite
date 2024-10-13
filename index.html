@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles/bio.css">
+    <script src="./scripts/index-page.js" defer></script>
 </head>
 
 <body>
@@ -14,7 +15,7 @@
             <h1><a href="index.html" class="header__logo">BANDSITE</a></h1>
             <div class="header__nav">
                 <h3><a href="index.html" class="header__nav-title header__nav--bio">Biography</a></h3>
-                <h3><a href="" class="header__nav-title header__nav--shows">Shows</a></h3>
+                <h3><a href="./pages/shows.html" class="header__nav-title header__nav--show">Shows</a></h3>
             </div>
         </div>
         <div class="header__image">
@@ -72,31 +73,27 @@
             </div>
         </section>
 
-<!-- form -->
-<!-- form -->
-<!-- form -->
-<!-- form -->         
+        <!-- form -->
         <form class="form" method="GET">
             <h1 class="form__title main__subtitle">Join the Conversation</h1>
             <div class="form__content">
-                <div class="form__avatar"></div>
-
+                <img src="assets/images/Mohan-muruge.jpg" class="form__avatar--modified" alt="mohan_avatar">
                 <div class="form__comment">
                     <label class="form__label" for="name">NAME</label>
                     <input class="form__input" type="text" id="name" name="name" placeholder="Enter your name">
 
                     <label class="form__label form__label--modified" for="comment">COMMENT</label>
-                    <textarea class="form__input" name="comment" id="comment" placeholder="Add a new comment"></textarea>
+                    <textarea class="form__input--modified" name="comment" id="comment"
+                        placeholder="Add a new comment"></textarea>
 
                     <button class="form__comment-button" type="submit">COMMENT</button>
                 </div>
             </div>
+            <hr class="divider">
         </form>
         <ul>
             <!-- ul stays query selector everything under using js-->
-            <li>
-                <div></div>
-            </li>
+            
         </ul>
     </main>
 

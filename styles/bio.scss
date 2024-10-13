@@ -5,7 +5,8 @@
 html,
 body,
 h1,
-h3 {
+h3,
+ul {
     margin: 0;
     padding: 0;
     font-family: "AvenirNextLTPro";
@@ -43,11 +44,26 @@ h3 {
 
         &--bio {
             color: $White;
-        &::after {
-            @include header-underline;
-            left: 0;
+
+            &::after {
+                @include header-underline;
+                left: 0;
+            }
         }
-    }
+
+        &--show {    
+            font-weight: 100;
+
+            &:hover::after {
+                @include header-underline;
+                right: 0;
+            }
+
+            &:hover{
+                font-weight: 100;
+                color: $White;
+            }
+        }
     }
 
 
@@ -57,7 +73,7 @@ h3 {
         background-position: center;
         background-size: cover;
         width: 100%;
-        height: 23.125rem;
+        height: 56vh;
         position: relative;
 
 
@@ -80,7 +96,7 @@ h3 {
 
     &__subtitle {
         @include section-header;
-        font-size: 2.5rem;
+        font-size: 3rem;
         font-weight: 600;
         padding-top: 3rem;
         padding-bottom: 2.25rem;
@@ -172,43 +188,63 @@ h3 {
     padding-right: 28px;
 
     &__title{
-        padding-top: 20px;
+        padding-top: 45px;
     }
 
     &__content{
         display: flex;
-        padding-top: 20px;
+        padding-top: 25px;
     }
 
+
     &__avatar{
-        margin-top: 10px;
-        width: 60px;         
-        height: 60px;
-        background-color: $Mercury;  
-        border-radius: 50%;   
-        display: inline-block; 
+        @include avatar;
+
+        &--modified{
+            @include avatar;
+            object-fit: cover;
+            object-position: -7px center; 
+            margin-top: 40px;
+        }
     }
 
     &__comment{
         display: flex;
         flex-direction: column;
-        padding-left: 26px;
+        padding-left: 30px;
         width:100%;
     }
 
     &__label{
         color: $Silver;
         font-weight: 600;
+        font-size: 20px;
+        // border-radius: 40%;
 
         &--modified{
-            margin-top: 20px; 
+            margin-top: 50px; 
         }
     }
 
     &__input {
-        margin-top: 10px; 
-        width: calc(100% - 2rem);
+        margin-top: 15px; 
+        width: calc(100% - 2.5rem);
         padding: 10px 20px;
+        border-radius: 5px;
+        border: 2px solid $Silver;
+        height: 55px;
+        font-size: 1.5625rem; 
+        font-family: "AvenirNextLTPro";
+
+        &--modified{
+            @extend .form__input;
+            height: 200px;
+            font-size: 25px; 
+
+            &::placeholder{
+                padding-top: 10px;
+            }
+        }
     }
     
     &__input::placeholder{
@@ -217,11 +253,62 @@ h3 {
 
     &__comment-button{
         @include ticket-button;
+        margin-top: 40px;
+        margin-bottom: 30px;
+
+
+        &:hover{
+            background-color: $BandSite-DarkBlack;
+        }
     }
 }
 
+// display comment
+.comment{
+    &-user{
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        align-items: center; 
+        height: 30px; 
+        padding-top: 10px;
+    }
+    &-name{
+        font-weight: 600;
+        font-size: 1.8rem;
+        line-height: 1.7;
+    }
+
+    &-date{
+        font-size: 1.5625rem;
+        color: $Silver;
+        margin: 0;
+    }
+
+    &-content{
+        font-size: 1.5625rem;
+        line-height: 1.7;
+    }
+}
+article{
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+.form__avatar{
+    @include avatar;
+
+}
+
+.divider{
+    height: 1px;                 
+    background-color:$Mercury;   
+    margin: 20px 0;   
+}
 
 
+// footer
+// footer
 .footer {
     padding-left: 1.75rem;
     color: $White;
@@ -238,6 +325,7 @@ h3 {
 
 .footer__background {
     background-color: $BandSite-Black;
+    margin-top: 2.5rem;
 }
 
 .apps {
