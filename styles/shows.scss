@@ -123,6 +123,10 @@ ul {
         padding-bottom: 10px;
     }
 
+    &-title--tablet {
+        display: none;
+    }
+
     &__title {
         color: $Silver;
         font-size: 1.5rem;
@@ -223,13 +227,7 @@ h1 {
 
     .shows {
         &-list {
-            article:first-child {
-                .ticket-button {
-                   margin-bottom: 0;
-                }
-            }
-
-            article:not(:first-child) {
+            article {
                 .shows__title {
                     display: none;
                 }
@@ -239,6 +237,16 @@ h1 {
         &-block {
             display: flex;
             flex-direction: row;
+
+            &:hover{
+                background-color: $Alabaster;
+            }
+
+            &:active,
+            &.active{
+                background-color: $Mercury;
+            }
+
         }
 
         &-info {
@@ -283,6 +291,8 @@ h1 {
     .footer__title--bottom {
         display: none;
     }
+
+
 }
 
 // desktop

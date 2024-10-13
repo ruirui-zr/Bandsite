@@ -31,19 +31,67 @@ const showsListArray = [
     }]
 
 
-// Buy Tickets
+// shows heading
 const showsHeading = document.createElement("h1");
 showsHeading.classList.add("shows__heading")
 showsHeading.textContent = "Shows";
 const main = document.querySelector("main");
 main.insertBefore(showsHeading, main.firstChild)
 
-const showsList = document.querySelector(".shows-list"); // Assuming showsList is the <ul> or parent container element
+// shows title
+const showsList = document.querySelector(".shows-list"); 
+
+let article = document.createElement("article");
+article.classList.add("shows-block");
+article.classList.add("shows-title--tablet");
+
+// DATE
+let dateDiv = document.createElement("div");
+dateDiv.classList.add("shows-info");
+
+let dateTitle = document.createElement("p");
+dateTitle.classList.add("shows__title", "shows__title--modified");
+dateTitle.textContent = "DATE";
+
+dateDiv.appendChild(dateTitle);
+
+// VENUE
+let venueDiv = document.createElement("div");
+venueDiv.classList.add("shows-info");
+
+let venueTitle = document.createElement("p");
+venueTitle.classList.add("shows__title");
+venueTitle.textContent = "VENUE";
+
+venueDiv.appendChild(venueTitle);
+
+// LOCATION
+let locationDiv = document.createElement("div");
+locationDiv.classList.add("shows-info");
+
+let locationTitle = document.createElement("p");
+locationTitle.classList.add("shows__title");
+locationTitle.textContent = "LOCATION";
+
+locationDiv.appendChild(locationTitle);
+
+// Append 
+article.appendChild(dateDiv);
+article.appendChild(venueDiv);
+article.appendChild(locationDiv);
+
+main.insertBefore(article, showsList)
 
 for (let i = 0; i < showsListArray.length; i++) {
     // article
     let article = document.createElement("article");
     article.classList.add("shows-block");
+    article.addEventListener("click", function(){
+        document.querySelectorAll("article").forEach(function(el) {
+            el.classList.remove("active");
+        });
+        this.classList.toggle("active");
+    })
 
     // date div
     let dateDiv = document.createElement("div");
@@ -109,4 +157,3 @@ for (let i = 0; i < showsListArray.length; i++) {
     showsList.appendChild(article);
     showsList.appendChild(divider);
 }
-

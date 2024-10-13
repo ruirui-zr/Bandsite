@@ -138,6 +138,9 @@ ul {
 .shows-info {
   padding-bottom: 10px;
 }
+.shows-title--tablet {
+  display: none;
+}
 .shows__title {
   color: #AFAFAF;
   font-size: 1.5rem;
@@ -225,15 +228,18 @@ h1 {
   .header__nav--bios:active::after {
     transform: scaleX(1);
   }
-  .shows-list article:first-child .ticket-button {
-    margin-bottom: 0;
-  }
-  .shows-list article:not(:first-child) .shows__title {
+  .shows-list article .shows__title {
     display: none;
   }
   .shows-block {
     display: flex;
     flex-direction: row;
+  }
+  .shows-block:hover {
+    background-color: #FAFAFA;
+  }
+  .shows-block:active, .shows-block.active {
+    background-color: #E1E1E1;
   }
   .shows-info {
     display: flex;

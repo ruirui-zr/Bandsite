@@ -1,17 +1,17 @@
 const commentArray = [
     {
         name: "Isaac Tadesse",
-        date: "10/20/2023",
+        timestamp: 1697774400000,
         content: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
     },
     {
         name: "Christina Cabrera",
-        date: "10/28/2023",
+        timestamp: 1698465600000,
         content: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
     },
     {
         name: "Victor Pinto",
-        date: "11/02/2023",
+        timestamp: 1698897600000,
         content: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
     }
 ]
@@ -43,7 +43,7 @@ function createCommentCard(comment) {
 
     const dateEl = document.createElement("p");
     dateEl.classList.add("comment-date");
-    dateEl.innerText = comment.date;
+    dateEl.innerText = convertToDateString(comment.timestamp);
     userEl.appendChild(dateEl);
 
     const commentContentEl = document.createElement("p");
@@ -80,10 +80,10 @@ function handleFormSubmit(event) {
         return
     }
 
-    const date = createDate();
+    const now = Date.now();
     const comment = {
         name: userName,
-        date: date,
+        timestamp: now,
         content: commentContent
     };
 
@@ -92,15 +92,37 @@ function handleFormSubmit(event) {
     formEl.reset();
 }
 
-function createDate(){
-    const date = new Date();
+function convertToDateString(timestamp){
+    const now = new Date();
+    const commentDate = new Date(timestamp); 
 
-    const mm = String(date.getMonth() + 1).padStart(2, '0');
-    const dd = String(date.getDate()).padStart(2, '0');
-    const yyyy = date.getFullYear();
+    const timeDifference = Math.abs(now - commentDate);
 
-    const formattedDate = `${mm}/${dd}/${yyyy}`;
-    return formattedDate;
+    const seconds = Math.floor(timeDifference / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
+    const weeks = Math.floor(days / 7);
+    const months = Math.floor(days / 30);
+    const years = Math.floor(days / 365);
+
+    if (seconds < 3) {
+        return 'Just now'
+    } else if (seconds < 60) {
+        return `${seconds} seconds ago`;
+    } else if (minutes < 60) {
+        return `${minutes} minutes ago`;
+    } else if (hours < 24) {
+        return `${hours} hours ago`;
+    } else if (days < 7) {
+        return `${days} days ago`;
+    } else if (weeks < 5) {
+        return `${weeks} weeks ago`;
+    } else if (months < 12) {
+        return `${months} months ago`;
+    } else {
+        return `${years} years ago`;
+    }
 }
 
 const formEl = document.querySelector('form');
