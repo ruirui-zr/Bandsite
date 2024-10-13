@@ -90,6 +90,17 @@
             @content;
 }
 
+@mixin header-underline--tablet{
+        position: absolute;
+        content: "";
+        width: 60%;
+        height: 4px;
+        background-color: white;
+        bottom: -25px;
+        transform: scaleX(1);
+        @content;
+}
+
 @mixin avatar{
     margin-top: 10px;
     width: 70px;         

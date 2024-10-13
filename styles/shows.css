@@ -175,4 +175,119 @@ ul {
 
 h1 {
   padding: 0;
+}
+
+@media (min-width: 768px) {
+  .header__nav {
+    justify-content: flex-start;
+    padding: 0 1.25rem;
+    align-items: center;
+  }
+  .header__nav--shows {
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+    color: #FFFFFF;
+  }
+  .header__nav--shows::after {
+    position: absolute;
+    content: "";
+    width: 60%;
+    height: 4px;
+    background-color: white;
+    bottom: -25px;
+    transform: scaleX(1);
+    left: 46px;
+  }
+  .header__nav--bios {
+    position: relative;
+    display: inline-block;
+    font-weight: 100;
+  }
+  .header__nav--bios:hover::after {
+    position: absolute;
+    content: "";
+    width: 60%;
+    height: 4px;
+    background-color: white;
+    bottom: -25px;
+    transform: scaleX(1);
+    left: 48px;
+  }
+  .header__nav--bios:hover {
+    font-weight: 100;
+    color: #FFFFFF;
+  }
+  .header__nav--bios:active {
+    font-weight: 600;
+    color: #FFFFFF;
+  }
+  .header__nav--bios:active::after {
+    transform: scaleX(1);
+  }
+  .shows-list article:first-child .ticket-button {
+    margin-bottom: 0;
+  }
+  .shows-list article:not(:first-child) .shows__title {
+    display: none;
+  }
+  .shows-block {
+    display: flex;
+    flex-direction: row;
+  }
+  .shows-info {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    justify-content: center;
+    padding: 0;
+  }
+  .shows__title, .shows__detail {
+    font-size: 1rem;
+  }
+  .shows__title {
+    padding-bottom: 20px;
+  }
+  .shows__title--modified {
+    padding-top: 0px;
+  }
+  .shows__detail {
+    padding-bottom: 10px;
+  }
+  .ticket-button {
+    width: 25%;
+    padding: 0px;
+    font-size: 1rem;
+    padding-inline: 0px;
+    margin: 20px 0px;
+    height: 2.8rem;
+  }
+  .divider {
+    margin: 8px 15px;
+  }
+  .footer__title--bottom {
+    display: none;
+  }
+}
+@media (min-width: 1280px) {
+  .header__nav--shows::after {
+    bottom: -38px;
+  }
+  .header__nav--bios:hover::after {
+    bottom: -38px;
+  }
+  main {
+    display: flex;
+    width: 100%;
+  }
+  .shows-list {
+    justify-content: space-around;
+    padding-top: 100px;
+    width: 70%;
+    padding-right: 140px;
+  }
+  .shows__heading {
+    width: 20%;
+    padding-left: 160px;
+  }
 }/*# sourceMappingURL=shows.css.map */

@@ -5,7 +5,7 @@
 html,
 body,
 h1,
-h3{
+h3 {
     margin: 0;
     padding: 0;
     font-family: "AvenirNextLTPro";
@@ -21,12 +21,12 @@ h3{
         height: 76vh;
         position: relative;
 
-        &-title{
-            top:25%;
+        &-title {
+            top: 25%;
             line-height: 1.5;
         }
 
-        &-album{
+        &-album {
             @include padding-left-right;
             top: 12%;
             position: absolute;
@@ -36,10 +36,10 @@ h3{
         }
     }
 
-    &__nav{
+    &__nav {
         @include header-nav-bar;
 
-        &--shows{
+        &--shows {
             color: $White;
 
             &::after {
@@ -48,7 +48,7 @@ h3{
             }
         }
 
-        &--bios {   
+        &--bios {
             font-weight: 100;
 
             &:hover::after {
@@ -56,7 +56,7 @@ h3{
                 left: 0;
             }
 
-            &:hover{
+            &:hover {
                 font-weight: 100;
                 color: $White;
             }
@@ -64,14 +64,14 @@ h3{
     }
 }
 
-h1{
+h1 {
     padding-left: 56px;
 }
 
 
-.music{
+.music {
     position: absolute;
-    width:90%;
+    width: 90%;
     // top: 54%;
     top: 58%;
     padding-left: 28px;
@@ -80,7 +80,7 @@ h1{
 
 .audio-player {
     width: 100%;
-  }
+}
 
 .shows__heading {
     white-space: pre-line;
@@ -92,15 +92,16 @@ h1{
 }
 
 p.shows__title,
-p.shows__detail{
+p.shows__detail {
     margin: 0;
     // padding: 0;
 }
 
-ul{
+ul {
     padding-left: 0;
 }
-.shows{
+
+.shows {
     &__subtitle {
         @include padding-left-right;
         @include section-header;
@@ -114,46 +115,48 @@ ul{
         }
     }
 
-    &-block{
+    &-block {
         @include padding-left-right;
     }
 
-    &-info{
+    &-info {
         padding-bottom: 10px;
     }
 
-    &__title{
+    &__title {
         color: $Silver;
         font-size: 1.5rem;
         padding-bottom: 12px;
         font-weight: 600;
-        &--modified{
+
+        &--modified {
             padding-top: 26px;
         }
     }
 
-    &__detail{
+    &__detail {
         font-size: 1.8rem;
         padding-bottom: 25px;
         padding-top: 8px;
-        &--modified{
+
+        &--modified {
             font-weight: 600;
         }
     }
 
 }
 
-.ticket-button{
+.ticket-button {
     @include ticket-button;
 }
 
-.divider{
-    height: 1px;                 
-    background-color:$Mercury;   
-    margin: 20px 0;   
+.divider {
+    height: 1px;
+    background-color: $Mercury;
+    margin: 20px 0;
 }
 
-h1{
+h1 {
     padding: 0;
 }
 
@@ -171,15 +174,151 @@ h1{
 // tablet version
 // tablet version
 
-// @media (min-width: $tablet-break-point) {
+@media (min-width: $tablet-break-point) {
+    .header {
+        &__nav {
+            justify-content: flex-start;
+            padding: 0 1.25rem;
+            align-items: center;
 
-// }
+            &--shows {
+                position: relative;
+                display: inline-block;
+                font-weight: 600;
+                color: $White;
+
+
+                &::after {
+                    @include header-underline--tablet;
+                    left: 46px;
+                }
+            }
+
+            &--bios {
+                position: relative;
+                display: inline-block;
+                font-weight: 100;
+
+                &:hover::after {
+                    @include header-underline--tablet;
+                    left: 48px;
+                }
+
+                &:hover {
+                    font-weight: 100;
+                    color: $White;
+                }
+
+                &:active {
+                    font-weight: 600;
+                    color: $White;
+
+                    &::after {
+                        transform: scaleX(1);
+                    }
+                }
+            }
+        }
+    }
+
+    .shows {
+        &-list {
+            article:first-child {
+                .ticket-button {
+                   margin-bottom: 0;
+                }
+            }
+
+            article:not(:first-child) {
+                .shows__title {
+                    display: none;
+                }
+            }
+        }
+
+        &-block {
+            display: flex;
+            flex-direction: row;
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            width: 25%;
+            justify-content: center;
+            padding: 0;
+        }
+
+        &__title,
+        &__detail {
+            font-size: 1rem;
+        }
+
+        &__title {
+            padding-bottom: 20px;
+
+            &--modified {
+                padding-top: 0px;
+            }
+        }
+
+        &__detail {
+            padding-bottom: 10px;
+        }
+    }
+
+    .ticket-button {
+        width: 25%;
+        padding: 0px;
+        font-size: 1rem;
+        padding-inline: 0px;
+        margin: 20px 0px;
+        height: 2.8rem;
+    }
+
+    .divider {
+        margin: 8px 15px;
+    }
+
+    .footer__title--bottom {
+        display: none;
+    }
+}
 
 // desktop
 // desktop
 // desktop
+@media (min-width: $desktop-break-point) {
+    .header {
+        &__nav {
+            &--shows::after {
+                bottom: -38px;
+            }
 
+            &--bios {
+                &:hover::after {
+                    bottom: -38px;
+                }
+            }
+        }
 
-// @media (min-width: $desktop-break-point) {
-   
-// }
+    }
+    main{
+        display: flex;
+        width: 100%;
+    }
+
+    .shows-list{
+        justify-content: space-around;
+        padding-top: 100px;
+        width: 70%;
+        padding-right: 140px;
+
+    }
+            
+    .shows__heading{
+        width: 20%;
+        padding-left: 160px;
+    }
+
+}

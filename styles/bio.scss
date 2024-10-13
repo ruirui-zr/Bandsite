@@ -63,6 +63,15 @@ ul {
                 font-weight: 100;
                 color: $White;
             }
+
+            &:active {
+                font-weight: 600;
+                color: $White;
+
+                &::after {
+                    transform: scaleX(1);
+                }
+            }
         }
     }
 
@@ -73,7 +82,7 @@ ul {
         background-position: center;
         background-size: cover;
         width: 100%;
-        height: 56vh;
+        height: 50vh;
         position: relative;
 
 
@@ -179,9 +188,6 @@ ul {
     }
 }
 
-// conversion
-// conversion
-// conversion
 // conversion
 .form{
     padding-left: 28px;
@@ -398,8 +404,6 @@ p.copyright{
 // tablet version
 // tablet version
 // tablet version
-// tablet version
-// tablet version
 @media (min-width: $tablet-break-point) {
     .header {
         text-align: left;
@@ -430,57 +434,28 @@ p.copyright{
             &--bio {
                 position: relative;
                 display: inline-block;
-                font-weight: 100;
+                font-weight: 600;
+                color: $White;
+
 
                 &::after {
-                    position: absolute;
-                    content: "";
-                    width: 60%;
-                    height: 4px;
-                    background-color: white;
-                    bottom: -25px;
-                    left: 50px;
-                    transform: scaleX(0);
-                }
-
-                &:hover::after {
-                    transform: scaleX(1);
-                }
-
-                &:hover{
-                    color: $White;
-                }
-                
-                &:active {
-                    font-weight: 600;
-                    color: $White;
-
-                    &::after {
-                        transform: scaleX(1);
-                    }
+                    @include header-underline--tablet;
+                    left: 48px;
                 }
             }
 
-            &--shows {
+            &--show {
                 position: relative; 
                 display: inline-block; 
-
-                &::after {
-                    position: absolute;
-                    content: "";
-                    width: 60%;
-                    height: 4px;
-                    background-color: white;
-                    bottom: -25px;
-                    left: 45px;
-                    transform: scaleX(0);
-                }
+                font-weight: 100;
 
                 &:hover::after {
-                    transform: scaleX(1);
+                    @include header-underline--tablet;
+                    left: 46px;
                 }
-
+    
                 &:hover{
+                    font-weight: 100;
                     color: $White;
                 }
                 
@@ -658,6 +633,61 @@ p.copyright{
     .copyright--mobile {
         display: none;
     }
+
+    .form__content{
+        padding: 20px 56px;
+
+    }
+
+    .divider{
+        margin: 0 56px;
+    }
+
+    .form__avatar--modified,
+    .form__avatar{
+        width: 60px;
+        height: 60px;
+    }
+
+    .form__label{
+        font-size: 16px;
+        padding-top: 20px;
+
+        &--modified{
+            margin-top: 10px;
+        }
+    }
+
+    .form__input, 
+    .form__input--modified{
+        font-size: 1.2rem;
+    }
+
+    .form__input{
+        height: 40px;
+        background-color: $Alabaster;
+
+        &--modified{
+            height: 90px;
+        }
+    }
+
+    .form__comment-button{
+        width: 30%;
+        align-self: flex-end;
+        padding: 10px 0;
+        font-size: 1.2rem;
+    }
+
+    .comment-name,
+    .comment-date{
+        font-size: 1.2rem;
+    }
+
+    .comment-content {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
 }
 
 @media (min-width: $desktop-break-point) {
@@ -670,8 +700,10 @@ p.copyright{
             &--bio::after{
                 bottom: -38px;
             }
-            &--shows::after{
-                bottom: -38px;
+            &--show{
+                &:hover::after {
+                    bottom: -38px;
+                }
             }
         }
 
@@ -725,8 +757,30 @@ p.copyright{
         @include desktop-padding-left-right;
     }
 
+    .footer__title--bottom{
+        display:none;
+    }
+
     .contact__info {
         justify-content: flex-start;
         gap: 140px;
+    }
+
+    .form{
+        padding: 0 140px;
+
+        &__content{
+            padding: 10px 240px;
+        } 
+    }
+
+    article{
+        padding-left:140px;
+        padding-right:140px;
+    }
+
+    .divider{
+        margin-left:240px;
+        margin-right:240px;
     }
 }
