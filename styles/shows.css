@@ -247,6 +247,12 @@ h1 {
   .shows-block:active, .shows-block.active {
     background-color: #E1E1E1;
   }
+  .shows-title--tablet:hover {
+    background-color: #FFFFFF;
+  }
+  .shows-title--tablet:active, .shows-title--tablet.active {
+    background-color: #FFFFFF;
+  }
   .shows-info {
     display: flex;
     flex-direction: column;

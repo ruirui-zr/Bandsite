@@ -118,7 +118,7 @@ function convertToDateString(timestamp){
         return `${days} days ago`;
     } else if (weeks < 5) {
         return `${weeks} weeks ago`;
-    } else if (months < 12) {
+    } else if (months <= 12) {
         return `${months} months ago`;
     } else {
         return `${years} years ago`;

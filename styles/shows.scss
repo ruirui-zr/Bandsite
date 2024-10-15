@@ -172,11 +172,6 @@ h1 {
     padding: 0;
 }
 
-// .footer__title--bottom{
-//     padding-top: 4rem;
-//     padding-bottom: 0.6rem;
-// }
-
 
 
 
@@ -254,7 +249,17 @@ h1 {
             &.active{
                 background-color: $Mercury;
             }
+        }
 
+        &-title--tablet{
+            &:hover{
+                background-color: $White;
+            }
+
+            &:active,
+            &.active{
+                background-color: $White;
+            }
         }
 
         &-info {
