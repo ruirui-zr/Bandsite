@@ -1,20 +1,6 @@
-const commentArray = [
-    {
-        name: "Isaac Tadesse",
-        timestamp: 1697774400000,
-        content: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
-    },
-    {
-        name: "Christina Cabrera",
-        timestamp: 1698465600000,
-        content: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
-    },
-    {
-        name: "Victor Pinto",
-        timestamp: 1698897600000,
-        content: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
-    }
-]
+const api_key = "756a6f6d-35ad-424c-81aa-e12a0616cce1"; 
+const bandsite = new BandSiteApi(api_key)
+let commentArray;
 
 function createCommentCard(comment) {
     const commentCard = document.createElement("article");
@@ -48,7 +34,7 @@ function createCommentCard(comment) {
 
     const commentContentEl = document.createElement("p");
     commentContentEl.classList.add("comment-content");
-    commentContentEl.innerText = comment.content;
+    commentContentEl.innerText = comment.comment;
     commentEl.appendChild(commentContentEl);
 
 
@@ -59,9 +45,14 @@ function createCommentCard(comment) {
     return commentCard;
 }
 
-function renderAllCommments() {
+function renderAllCommments(commentArray) {
     const commentListEl = document.querySelector("ul");
     commentListEl.innerHTML = "";
+
+    // sort comments according to timestamp
+    commentArray.sort((a, b) => {
+        return a.timestamp - b.timestamp
+    })
 
     commentArray.forEach((comment) =>{
         const card = createCommentCard(comment);
@@ -70,7 +61,7 @@ function renderAllCommments() {
     })
 }
 
-function handleFormSubmit(event) {
+async function handleFormSubmit(event) {
     event.preventDefault();
 
     const userName = event.target.name.value;
@@ -80,16 +71,21 @@ function handleFormSubmit(event) {
         return
     }
 
-    const now = Date.now();
     const comment = {
         name: userName,
-        timestamp: now,
-        content: commentContent
+        comment: commentContent
     };
 
-    commentArray.push(comment);
-    renderAllCommments();
+    await bandsite.postComment(comment);
+    await refreshComments();
+    const formEl = document.querySelector('form');
     formEl.reset();
+}
+
+async function refreshComments() {
+    commentArray = await bandsite.getComments();
+    console.log(commentArray)
+    renderAllCommments(commentArray);
 }
 
 function convertToDateString(timestamp){
@@ -125,7 +121,15 @@ function convertToDateString(timestamp){
     }
 }
 
-const formEl = document.querySelector('form');
-formEl.addEventListener("submit", handleFormSubmit);
 
-renderAllCommments();
+
+async function main() {
+    commentArray = await bandsite.getComments();
+
+    const formEl = document.querySelector('form');
+    formEl.addEventListener("submit", handleFormSubmit);
+
+    renderAllCommments(commentArray);
+}
+
+main();
