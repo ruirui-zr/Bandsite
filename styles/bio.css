@@ -23,6 +23,33 @@ ul {
   font-family: "AvenirNextLTPro";
 }
 
+.hidden {
+  display: none;
+}
+
+.like-button {
+  margin-bottom: 30px;
+  margin-left: 6.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.comment-icon {
+  height: 32px;
+  width: 32px;
+}
+
+.delete-button {
+  margin-bottom: 30px;
+  margin-left: 6.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+}
+
 .header {
   background-color: #323232;
   display: flex;
@@ -408,6 +435,9 @@ p.copyright {
 }
 
 @media (min-width: 768px) {
+  .like-button {
+    margin-left: 9rem;
+  }
   .header {
     text-align: left;
     flex-direction: row;
@@ -661,6 +691,9 @@ p.copyright {
   }
 }
 @media (min-width: 1280px) {
+  .like-button {
+    margin-left: 20.5rem;
+  }
   .header {
     padding-left: 160px;
     padding-right: 160px;

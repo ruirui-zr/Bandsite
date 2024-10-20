@@ -12,6 +12,34 @@ ul {
     font-family: "AvenirNextLTPro";
 }
 
+.hidden{
+    display:none;
+}
+
+.like-button{
+    margin-bottom: 30px;
+    margin-left: 6.25rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.comment-icon{
+    height:32px;
+    width:32px;
+}
+
+.delete-button{
+    margin-bottom: 30px;
+    margin-left: 6.25rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+}
+
+
 .header {
     background-color: $BandSite-Black;
     display: flex;
@@ -405,6 +433,10 @@ p.copyright{
 // tablet version
 // tablet version
 @media (min-width: $tablet-break-point) {
+    .like-button{
+        margin-left: 9rem;
+    }
+
     .header {
         text-align: left;
         flex-direction: row;
@@ -696,6 +728,10 @@ p.copyright{
 }
 
 @media (min-width: $desktop-break-point) {
+    .like-button{
+        margin-left: 20.5rem;
+    }
+
     .header {
         @include desktop-padding-left-right;
         padding-top: 30px;

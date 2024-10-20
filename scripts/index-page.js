@@ -4,6 +4,7 @@ let commentArray;
 
 function createCommentCard(comment) {
     const commentCard = document.createElement("article");
+    commentCard.id = comment.id;
     
     const contentEl = document.createElement("div");
     contentEl.classList.add("form__content");
@@ -36,13 +37,63 @@ function createCommentCard(comment) {
     commentContentEl.classList.add("comment-content");
     commentContentEl.innerText = comment.comment;
     commentEl.appendChild(commentContentEl);
+    
+    const likeButtonEl = document.createElement("button");
+    likeButtonEl.classList.add("like-button");
+
+    const likeIconEl = document.createElement("img");
+    likeIconEl.classList.add("comment-icon");
+    likeIconEl.setAttribute("src", "./assets/icons/png/heart_empty.png")
+    likeIconEl.id = "likeIcon";
+    likeButtonEl.appendChild(likeIconEl);
+
+    const likedIconEl = document.createElement("img");
+    likedIconEl.classList.add("comment-icon");
+    likedIconEl.classList.add("hidden");
+    likedIconEl.id = "likedIcon";
+    likedIconEl.setAttribute("src", "./assets/icons/png/heart_filled.png")
+    likeButtonEl.appendChild(likedIconEl);
+    likeButtonEl.commentId = comment.id;
+    likeButtonEl.addEventListener("click", handleLike)
+
+    commentCard.appendChild(likeButtonEl);
+
+    const likeNumberEl = document.createElement("span");
+    likeNumberEl.innerText = comment.likes;
+    likeButtonEl.appendChild(likeNumberEl);
+
+    const deleteButtonEl = document.createElement("button");
+    deleteButtonEl.classList.add("delete-button");
+    commentCard.appendChild(deleteButtonEl);
+
+    const deleteIconEl = document.createElement("img");
+    deleteIconEl.classList.add("comment-icon");
+    deleteIconEl.setAttribute("src", "./assets/icons/SVG/icon-delete.svg")
+    deleteButtonEl.appendChild(deleteIconEl);
+    deleteButtonEl.commentId = comment.id;
+    deleteButtonEl.addEventListener("click", handleDelete)
 
 
     const dividerEl = document.createElement("hr");
     dividerEl.classList.add("divider");
     commentCard.appendChild(dividerEl);
-
+    
     return commentCard;
+}
+
+async function handleLike(event){
+    const buttonEl = event.currentTarget;
+    const comment = await bandsite.likeComment(event.currentTarget.commentId);
+    buttonEl.querySelector("#likeIcon").classList.add("hidden");
+    buttonEl.querySelector("#likedIcon").classList.remove("hidden");
+    buttonEl.disabled = true;
+    buttonEl.querySelector('span').innerText = comment.likes;
+}
+
+async function handleDelete(event){
+    const comment = await bandsite.deleteComment(event.currentTarget.commentId);
+    console.log(comment)
+    document.getElementById(comment.id).remove();
 }
 
 function renderAllCommments() {
@@ -84,7 +135,6 @@ async function handleFormSubmit(event) {
 
 async function refreshComments() {
     commentArray = await bandsite.getComments();
-    console.log(commentArray)
     renderAllCommments();
 }
 

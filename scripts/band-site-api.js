@@ -19,11 +19,6 @@ class BandSiteApi{
         try{
             const url = `${this.baseUrl}/comments?api_key=${this.apiKey}`;
             const response = await axios.get(url);
-            console.log(response.data);
-
-            response.data.sort((a, b) => {
-                return b.timestamp - a.timestamp;
-            })
 
              console.log(response.data)
              return response.data;
@@ -44,6 +39,25 @@ class BandSiteApi{
         }
     }
 
+    async likeComment(id){
+        try{
+            const url = `${this.baseUrl}/comments/${id}/like?api_key=${this.apiKey}`;
+            const response = await axios.put(url);
+            return response.data;
+        } catch(error){
+            console.error(error)
+        }
+    }
+
+    async deleteComment(id){
+        try{
+            const url = `${this.baseUrl}/comments/${id}?api_key=${this.apiKey}`;
+            const response = await axios.delete(url);
+            return response.data;
+        } catch(error){
+            console.error(error)
+        }
+    }
 }
 
 // an instance of the BandSiteApi
