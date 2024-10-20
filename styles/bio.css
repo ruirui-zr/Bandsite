@@ -58,43 +58,6 @@ ul {
   padding-bottom: 2.2rem;
   font-weight: 600;
 }
-.header__nav--bio {
-  color: #FFFFFF;
-}
-.header__nav--bio::after {
-  position: absolute;
-  content: "";
-  width: 49vw;
-  height: 12px;
-  background-color: white;
-  bottom: -5px;
-  transform: scaleX(1);
-  left: 0;
-}
-.header__nav--show {
-  font-weight: 100;
-}
-.header__nav--show:hover::after {
-  position: absolute;
-  content: "";
-  width: 49vw;
-  height: 12px;
-  background-color: white;
-  bottom: -5px;
-  transform: scaleX(1);
-  right: 0;
-}
-.header__nav--show:hover {
-  font-weight: 100;
-  color: #FFFFFF;
-}
-.header__nav--show:active {
-  font-weight: 600;
-  color: #FFFFFF;
-}
-.header__nav--show:active::after {
-  transform: scaleX(1);
-}
 .header__image {
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/images/hero-bio.jpg");
   background-position: center;
@@ -111,6 +74,45 @@ ul {
   color: #FFFFFF;
   font-size: 3rem;
   font-weight: 510;
+}
+
+.bio {
+  color: #FFFFFF;
+}
+.bio::after {
+  position: absolute;
+  content: "";
+  width: 49vw;
+  height: 12px;
+  background-color: white;
+  bottom: -5px;
+  transform: scaleX(1);
+  left: 0;
+}
+
+.show {
+  font-weight: 100;
+}
+.show:hover::after {
+  position: absolute;
+  content: "";
+  width: 49vw;
+  height: 12px;
+  background-color: white;
+  bottom: -5px;
+  transform: scaleX(1);
+  right: 0;
+}
+.show:hover {
+  font-weight: 100;
+  color: #FFFFFF;
+}
+.show:active {
+  font-weight: 600;
+  color: #FFFFFF;
+}
+.show:active::after {
+  transform: scaleX(1);
 }
 
 .main__content {
@@ -433,13 +435,22 @@ p.copyright {
     font-weight: 100;
     color: #E1E1E1;
   }
-  .header__nav--bio {
+  .header__image {
+    height: 28.125rem;
+  }
+  .header__image-title {
+    padding-left: 36px;
+    padding-right: 36px;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+  }
+  .bio {
     position: relative;
     display: inline-block;
     font-weight: 600;
     color: #FFFFFF;
   }
-  .header__nav--bio::after {
+  .bio::after {
     position: absolute;
     content: "";
     width: 60%;
@@ -449,12 +460,12 @@ p.copyright {
     transform: scaleX(1);
     left: 48px;
   }
-  .header__nav--show {
+  .show {
     position: relative;
     display: inline-block;
     font-weight: 100;
   }
-  .header__nav--show:hover::after {
+  .show:hover::after {
     position: absolute;
     content: "";
     width: 60%;
@@ -464,25 +475,16 @@ p.copyright {
     transform: scaleX(1);
     left: 46px;
   }
-  .header__nav--show:hover {
+  .show:hover {
     font-weight: 100;
     color: #FFFFFF;
   }
-  .header__nav--show:active {
+  .show:active {
     font-weight: 600;
     color: #FFFFFF;
   }
-  .header__nav--show:active::after {
+  .show:active::after {
     transform: scaleX(1);
-  }
-  .header__image {
-    height: 28.125rem;
-  }
-  .header__image-title {
-    padding-left: 36px;
-    padding-right: 36px;
-    font-size: 3.75rem;
-    line-height: 4.25rem;
   }
   .main__content {
     padding-left: 36px;
@@ -582,10 +584,11 @@ p.copyright {
   }
   .copyright--tablet {
     display: block;
-    margin-left: auto;
     font-weight: 100;
     font-size: 1.5rem;
-    padding-top: 2.5rem;
+    position: absolute;
+    padding-top: 15px;
+    right: 36px;
     color: #FFFFFF;
     text-decoration: none;
   }
@@ -664,18 +667,18 @@ p.copyright {
     padding-top: 30px;
     padding-bottom: 30px;
   }
-  .header__nav--bio::after {
-    bottom: -38px;
-  }
-  .header__nav--show:hover::after {
-    bottom: -38px;
-  }
   .header__image {
     height: 87vh;
   }
   .header__image-title {
     padding-left: 160px;
     padding-right: 160px;
+  }
+  .bio::after {
+    bottom: -38px;
+  }
+  .show:hover::after {
+    bottom: -38px;
   }
   .main__content {
     padding-left: 140px;
@@ -727,5 +730,15 @@ p.copyright {
   .divider {
     margin-left: 240px;
     margin-right: 240px;
+  }
+  .copyright--tablet {
+    display: block;
+    font-weight: 100;
+    font-size: 1.5rem;
+    position: absolute;
+    padding-top: 15px;
+    right: 140px;
+    color: #FFFFFF;
+    text-decoration: none;
   }
 }/*# sourceMappingURL=bio.css.map */

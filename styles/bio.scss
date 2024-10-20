@@ -41,38 +41,6 @@ ul {
             font-weight: 600;
 
         }
-
-        &--bio {
-            color: $White;
-
-            &::after {
-                @include header-underline;
-                left: 0;
-            }
-        }
-
-        &--show {    
-            font-weight: 100;
-
-            &:hover::after {
-                @include header-underline;
-                right: 0;
-            }
-
-            &:hover{
-                font-weight: 100;
-                color: $White;
-            }
-
-            &:active {
-                font-weight: 600;
-                color: $White;
-
-                &::after {
-                    transform: scaleX(1);
-                }
-            }
-        }
     }
 
 
@@ -96,6 +64,38 @@ ul {
         }
     }
 
+}
+
+.bio {
+    color: $White;
+
+    &::after {
+        @include header-underline;
+        left: 0;
+    }
+}
+
+.show {    
+    font-weight: 100;
+
+    &:hover::after {
+        @include header-underline;
+        right: 0;
+    }
+
+    &:hover{
+        font-weight: 100;
+        color: $White;
+    }
+
+    &:active {
+        font-weight: 600;
+        color: $White;
+
+        &::after {
+            transform: scaleX(1);
+        }
+    }
 }
 
 .main {
@@ -430,44 +430,6 @@ p.copyright{
                 font-weight: 100;
                 color: $Mercury;
             }
-
-            &--bio {
-                position: relative;
-                display: inline-block;
-                font-weight: 600;
-                color: $White;
-
-
-                &::after {
-                    @include header-underline--tablet;
-                    left: 48px;
-                }
-            }
-
-            &--show {
-                position: relative; 
-                display: inline-block; 
-                font-weight: 100;
-
-                &:hover::after {
-                    @include header-underline--tablet;
-                    left: 46px;
-                }
-    
-                &:hover{
-                    font-weight: 100;
-                    color: $White;
-                }
-                
-                &:active {
-                    font-weight: 600;
-                    color: $White;
-
-                    &::after {
-                        transform: scaleX(1);
-                    }
-                }
-            }
         }
 
         &__image {
@@ -481,6 +443,44 @@ p.copyright{
         }
 
 
+    }
+
+    .bio {
+        position: relative;
+        display: inline-block;
+        font-weight: 600;
+        color: $White;
+
+
+        &::after {
+            @include header-underline--tablet;
+            left: 48px;
+        }
+    }
+
+    .show {
+        position: relative; 
+        display: inline-block; 
+        font-weight: 100;
+
+        &:hover::after {
+            @include header-underline--tablet;
+            left: 46px;
+        }
+
+        &:hover{
+            font-weight: 100;
+            color: $White;
+        }
+        
+        &:active {
+            font-weight: 600;
+            color: $White;
+
+            &::after {
+                transform: scaleX(1);
+            }
+        }
     }
 
     .main {
@@ -599,10 +599,11 @@ p.copyright{
 
     .copyright--tablet {
         display: block;
-        margin-left: auto;
         font-weight: 100;
         font-size: 1.5rem;
-        padding-top: 2.5rem;
+        position: absolute;
+        padding-top: 15px;
+        right: 36px;
         @include link;
     }
 
@@ -700,22 +701,21 @@ p.copyright{
         padding-top: 30px;
         padding-bottom: 30px;
 
-        &__nav{
-            &--bio::after{
-                bottom: -38px;
-            }
-            &--show{
-                &:hover::after {
-                    bottom: -38px;
-                }
-            }
-        }
-
         &__image {
             height: 87vh;
             &-title {
                 @include desktop-padding-left-right;
             }
+        }
+    }
+
+    .bio::after{
+        bottom: -38px;
+    }
+
+    .show{
+        &:hover::after {
+            bottom: -38px;
         }
     }
 
@@ -786,5 +786,15 @@ p.copyright{
     .divider{
         margin-left:240px;
         margin-right:240px;
+    }
+
+    .copyright--tablet {
+        display: block;
+        font-weight: 100;
+        font-size: 1.5rem;
+        position: absolute;
+        padding-top: 15px;
+        right: 140px;
+        @include link;
     }
 }
