@@ -433,6 +433,10 @@ p.copyright{
 // tablet version
 // tablet version
 @media (min-width: $tablet-break-point) {
+    .delete-button {
+        margin-right: 3rem;
+    }
+
     .like-button{
         margin-left: 9rem;
     }
@@ -730,6 +734,10 @@ p.copyright{
 @media (min-width: $desktop-break-point) {
     .like-button{
         margin-left: 20.5rem;
+    }
+
+    .delete-button {
+        margin-right: 22rem;
     }
 
     .header {

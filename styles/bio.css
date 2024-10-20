@@ -435,6 +435,9 @@ p.copyright {
 }
 
 @media (min-width: 768px) {
+  .delete-button {
+    margin-right: 3rem;
+  }
   .like-button {
     margin-left: 9rem;
   }
@@ -693,6 +696,9 @@ p.copyright {
 @media (min-width: 1280px) {
   .like-button {
     margin-left: 20.5rem;
+  }
+  .delete-button {
+    margin-right: 22rem;
   }
   .header {
     padding-left: 160px;
