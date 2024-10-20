@@ -45,7 +45,7 @@ function createCommentCard(comment) {
     return commentCard;
 }
 
-function renderAllCommments(commentArray) {
+function renderAllCommments() {
     const commentListEl = document.querySelector("ul");
     commentListEl.innerHTML = "";
 
@@ -85,7 +85,7 @@ async function handleFormSubmit(event) {
 async function refreshComments() {
     commentArray = await bandsite.getComments();
     console.log(commentArray)
-    renderAllCommments(commentArray);
+    renderAllCommments();
 }
 
 function convertToDateString(timestamp){
@@ -129,7 +129,7 @@ async function main() {
     const formEl = document.querySelector('form');
     formEl.addEventListener("submit", handleFormSubmit);
 
-    renderAllCommments(commentArray);
+    renderAllCommments();
 }
 
 main();
